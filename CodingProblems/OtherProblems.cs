@@ -41,7 +41,6 @@ namespace CodingProblems
         {
             ListNode prev  = null;
             ListNode current = head;
-            int currentPos = 1;
 
             ListNode beforeBegPosNode = null;
             ListNode begPosNode = null;
@@ -49,18 +48,16 @@ namespace CodingProblems
             ListNode endPosNode = null;
             ListNode afterEndPosNode = null;
 
-            while(current != null)
+            for (int currentPos = 1; currentPos <= endPos + 1; currentPos++)
             {
                 if (currentPos == begPos - 1)
                     beforeBegPosNode = current;
-
-                if (currentPos == begPos)
+                else if (currentPos == begPos)
                     begPosNode = current;
 
                 if (currentPos == endPos)
                     endPosNode = current;
-
-                if (currentPos == endPos + 1)
+                else if (currentPos == endPos + 1)
                 {
                     afterEndPosNode = current;
                     break;
@@ -73,8 +70,6 @@ namespace CodingProblems
 
                 prev = current;
                 current = next;
-
-                ++currentPos;
             }
 
             if (beforeBegPosNode != null)
