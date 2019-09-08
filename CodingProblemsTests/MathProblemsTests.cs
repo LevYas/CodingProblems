@@ -23,7 +23,7 @@ namespace CodingProblemsTests
         [Fact]
         public void CalcPiUsingMonteCarloTest()
         {
-            Assert.Equal(Math.PI, MathProblems.CalcPiUsingMonteCarlo(), 3);
+            Assert.True(Math.Abs(Math.PI - MathProblems.CalcPiUsingMonteCarlo()) < 1e-3);
         }
 
         [Theory]
