@@ -5,7 +5,6 @@ platform:
     - x86
 
 configuration:
-    - Debug
     - Release
 
 before_build:
