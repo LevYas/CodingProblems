@@ -85,29 +85,30 @@ public:
         }
 
         // 2nd stage: cleaning up existing entries in the range
-        auto itAtTheEntryAfterTheBegin = _map.upper_bound(keyBegin); // itD
-        auto itAtCurrentEntryAtTheBegin = std::prev(itAtTheEntryAfterTheBegin); //itE
+        auto itBeforeOrAtTheBeginOfInsertingRange = std::prev(_map.upper_bound(keyBegin)); //itE
 
         // i.e. if keyBegin == 7
-        //          itE     itD        
+        //          itE
         // lower    1       10          15
         // z        a       b           z
 
-        // TODO: Fix canonicalness problem while adding incremental ranges
-        // This code can fix it in this case, but it will fail other cases
-        //if (areKeysEq(itAtCurrentEntryAtTheBegin->first, keyBegin))
-        //    itAtTheEntryAfterTheBegin = itAtCurrentEntryAtTheBegin;
+        if (areKeysEq(itBeforeOrAtTheBeginOfInsertingRange->first, keyBegin) && itBeforeOrAtTheBeginOfInsertingRange != _map.begin())
+        {
+            auto itAtThePrevRangeBegin = std::prev(itBeforeOrAtTheBeginOfInsertingRange);
+            if (itAtThePrevRangeBegin->second == val)
+                itBeforeOrAtTheBeginOfInsertingRange = itAtThePrevRangeBegin;
+        }
 
-        while (itAtTheEntryAfterTheBegin != itAtTheEndOfComposedRange)
-            itAtTheEntryAfterTheBegin = _map.erase(itAtTheEntryAfterTheBegin++);
+        while (std::next(itBeforeOrAtTheBeginOfInsertingRange) != itAtTheEndOfComposedRange)
+            _map.erase(std::next(itBeforeOrAtTheBeginOfInsertingRange));
 
         // 3rd stage: try to insert new start entry
-        if (!(std::prev(itAtTheEntryAfterTheBegin)->second == val))
+        if (!(itBeforeOrAtTheBeginOfInsertingRange->second == val))
         {
-            if (areKeysEq(itAtCurrentEntryAtTheBegin->first, keyBegin))
-                itAtCurrentEntryAtTheBegin->second = val;
+            if (areKeysEq(itBeforeOrAtTheBeginOfInsertingRange->first, keyBegin))
+                itBeforeOrAtTheBeginOfInsertingRange->second = val;
             else
-                _map.insert(itAtTheEntryAfterTheBegin, std::make_pair(keyBegin, val));
+                _map.insert(itAtTheEndOfComposedRange, std::make_pair(keyBegin, val));
         }
     }
 

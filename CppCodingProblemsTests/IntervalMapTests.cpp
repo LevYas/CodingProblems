@@ -109,7 +109,7 @@ TEST_F(IntervalMapTest, InsertingOverridingRangeWithSameVals)
     assignAndCheck(IntervalMap, 1, 18, 'a');
 }
 
-TEST_F(IntervalMapTest, DISABLED_InsertingOverridingRangeWithSameValsIncrementally)
+TEST_F(IntervalMapTest, InsertingOverridingRangeWithSameValsIncrementally)
 {
     assignAndCheck(IntervalMap, 1, 10, 'a');
     assignAndCheck(IntervalMap, 10, 11, 'a');
