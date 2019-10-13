@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="std">
+      <UniqueIdentifier>{ffca4a02-b440-467b-927c-81e48a1133de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="utility">
+      <UniqueIdentifier>{c5a0c60d-ab9d-433a-8502-9f63b439fd15}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="QuadraticEquationSolver.cpp" />
+    <ClCompile Include="pch.cpp">
+      <Filter>std</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="utility\ReturningResult.h">
+      <Filter>utility</Filter>
+    </ClInclude>
+    <ClInclude Include="SolverMath.h" />
+    <ClInclude Include="pch.h">
+      <Filter>std</Filter>
+    </ClInclude>
+    <ClInclude Include="utility\StringStreamHelper.h">
+      <Filter>utility</Filter>
+    </ClInclude>
+    <ClInclude Include="CoefficientsParser.h" />
+    <ClInclude Include="CoefficientsDivider.h" />
+  </ItemGroup>
+</Project>

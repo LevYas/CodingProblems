@@ -17,6 +17,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "QuadraticEquationSolver", "QuadraticEquationSolver\QuadraticEquationSolver.vcxproj", "{8076E9C9-2473-4200-9389-D9A68444E771}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "QuadraticEquationSolverTests", "QuadraticEquationSolverTests\QuadraticEquationSolverTests.vcxproj", "{D8BE2278-F8B8-482D-82FE-F428103E27DD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +79,26 @@ Global
 		{6E90B6BF-819B-4F01-8A84-DFB0BFCD8AA7}.Release|x64.Build.0 = Release|x64
 		{6E90B6BF-819B-4F01-8A84-DFB0BFCD8AA7}.Release|x86.ActiveCfg = Release|Win32
 		{6E90B6BF-819B-4F01-8A84-DFB0BFCD8AA7}.Release|x86.Build.0 = Release|Win32
+		{8076E9C9-2473-4200-9389-D9A68444E771}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{8076E9C9-2473-4200-9389-D9A68444E771}.Debug|x64.ActiveCfg = Debug|x64
+		{8076E9C9-2473-4200-9389-D9A68444E771}.Debug|x64.Build.0 = Debug|x64
+		{8076E9C9-2473-4200-9389-D9A68444E771}.Debug|x86.ActiveCfg = Debug|Win32
+		{8076E9C9-2473-4200-9389-D9A68444E771}.Debug|x86.Build.0 = Debug|Win32
+		{8076E9C9-2473-4200-9389-D9A68444E771}.Release|Any CPU.ActiveCfg = Release|Win32
+		{8076E9C9-2473-4200-9389-D9A68444E771}.Release|x64.ActiveCfg = Release|x64
+		{8076E9C9-2473-4200-9389-D9A68444E771}.Release|x64.Build.0 = Release|x64
+		{8076E9C9-2473-4200-9389-D9A68444E771}.Release|x86.ActiveCfg = Release|Win32
+		{8076E9C9-2473-4200-9389-D9A68444E771}.Release|x86.Build.0 = Release|Win32
+		{D8BE2278-F8B8-482D-82FE-F428103E27DD}.Debug|Any CPU.ActiveCfg = Debug|Win32
+		{D8BE2278-F8B8-482D-82FE-F428103E27DD}.Debug|x64.ActiveCfg = Debug|x64
+		{D8BE2278-F8B8-482D-82FE-F428103E27DD}.Debug|x64.Build.0 = Debug|x64
+		{D8BE2278-F8B8-482D-82FE-F428103E27DD}.Debug|x86.ActiveCfg = Debug|Win32
+		{D8BE2278-F8B8-482D-82FE-F428103E27DD}.Debug|x86.Build.0 = Debug|Win32
+		{D8BE2278-F8B8-482D-82FE-F428103E27DD}.Release|Any CPU.ActiveCfg = Release|Win32
+		{D8BE2278-F8B8-482D-82FE-F428103E27DD}.Release|x64.ActiveCfg = Release|x64
+		{D8BE2278-F8B8-482D-82FE-F428103E27DD}.Release|x64.Build.0 = Release|x64
+		{D8BE2278-F8B8-482D-82FE-F428103E27DD}.Release|x86.ActiveCfg = Release|Win32
+		{D8BE2278-F8B8-482D-82FE-F428103E27DD}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
