@@ -39,8 +39,6 @@ namespace std {
     };
 }
 
-#define _ITERATOR_DEBUG_LEVEL 2
-
 template<typename K, typename V>
 class interval_map {
     std::map<K, V> _map;

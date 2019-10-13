@@ -20,9 +20,9 @@ namespace CodingProblems
         // Hint: The basic equation of a circle is x2 + y2 = r2.
         public static double CalcPiUsingMonteCarlo()
         {
-            double radius = 0.5;
+            const double radius = 0.5;
             int insidePtsAmount = 0;
-            int totalPoints = (int)1e8;
+            const int totalPoints = (int)1e8;
 
             Random rnd = new Random();
 
