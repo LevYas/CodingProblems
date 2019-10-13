@@ -7,9 +7,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodingProblems", "CodingPro
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodingProblemsTests", "CodingProblemsTests\CodingProblemsTests.csproj", "{2581EBFA-5205-4879-BA60-C10C2F25DC86}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CppCodingProblems", "CppCodingProblems\CppSandbox.vcxproj", "{E6F3298D-EE8D-466A-B764-8CC96224D82E}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CppCodingProblems", "CppCodingProblems\CppCodingProblems.vcxproj", "{E6F3298D-EE8D-466A-B764-8CC96224D82E}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CppCodingProblemsTests", "CppCodingProblemsTests\CppSandboxTests.vcxproj", "{6E90B6BF-819B-4F01-8A84-DFB0BFCD8AA7}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CppCodingProblemsTests", "CppCodingProblemsTests\CppCodingProblemsTests.vcxproj", "{6E90B6BF-819B-4F01-8A84-DFB0BFCD8AA7}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B709F87E-57E2-41CF-9A28-059862188D8E}"
 	ProjectSection(SolutionItems) = preProject
