@@ -6,14 +6,14 @@ using Xunit;
 
 namespace CodingProblemsTests
 {
-    public class ArraysTests
+    public class IndicesTests
     {
         [Theory]
         [InlineData(new int[] { 1, 1, 1 }, 2, 2)]
         [InlineData(new int[] { 1, 2, 3, 5, 0, 10, -5 }, 5, 5)]
         public void SubarraySumTest(int[] arr, int k, int expected)
         {
-            Assert.Equal(expected, Arrays.CalcSubarraysAmount(arr, k));
+            Assert.Equal(expected, Indices.CalcSubarraysAmount(arr, k));
         }
 
         [Theory]
@@ -26,7 +26,7 @@ namespace CodingProblemsTests
             var content = new StringBuilder();
             var writer = new StringWriter(content);
 
-            Arrays.CalcMinimumBribesAmount(writer, a);
+            Indices.CalcMinimumBribesAmount(writer, a);
 
             var actualOutput = content.ToString().Replace(Environment.NewLine, "");
             Assert.Equal(expected, actualOutput);
@@ -38,14 +38,14 @@ namespace CodingProblemsTests
         [InlineData(new int[] { 1, 2, 3, 4, 5 }, 4, new int[] { 5, 1, 2, 3, 4 })]
         public void RotLeftTest(int[] a, int d, int[] expected)
         {
-            Assert.Equal(expected, Arrays.RotateLeft(a, d));
+            Assert.Equal(expected, Indices.RotateLeft(a, d));
         }
 
         [Theory]
         [MemberData(nameof(ArrForHourglassSum))]
         public void HourglassSumTest(int[][] arr, int expected)
         {
-            Assert.Equal(expected, Arrays.CalcMaxHourglassSum(arr));
+            Assert.Equal(expected, Indices.CalcMaxHourglassSum(arr));
         }
 
         public static TheoryData<int[][], int> ArrForHourglassSum
@@ -73,9 +73,9 @@ namespace CodingProblemsTests
         [InlineData(new int[] { 5, 4, 3, 2, 3, 4, 5 }, 9)]
         public void WaterTrapTest(int[] arr, int expected)
         {
-            Assert.Equal(expected, Arrays.CalcTrappedWaterAmountUsingDP(arr));
-            Assert.Equal(expected, Arrays.CalcTrappedWaterAmountUsingStack(arr));
-            Assert.Equal(expected, Arrays.CalcTrappedWaterAmountUsingTwoPointers(arr));
+            Assert.Equal(expected, Indices.CalcTrappedWaterAmountUsingDP(arr));
+            Assert.Equal(expected, Indices.CalcTrappedWaterAmountUsingStack(arr));
+            Assert.Equal(expected, Indices.CalcTrappedWaterAmountUsingTwoPointers(arr));
         }
 
         [Theory]
@@ -83,7 +83,20 @@ namespace CodingProblemsTests
         [InlineData(new int[] { 0, 0, 0 }, 6)]
         public void ArrayZeroFragmentsTest(int[] arr, int expected)
         {
-            Assert.Equal(expected, Arrays.CalcZeroFragmentsCount(arr));
+            Assert.Equal(expected, Indices.CalcZeroFragmentsCount(arr));
+        }
+
+        [Theory]
+        [InlineData("abcdefg", 1, "abcdefg")]
+        [InlineData("b", 1, "b")]
+        [InlineData("b", 3, "b")]
+        [InlineData("abcdefg", 2, "bacdfeg")]
+        [InlineData("abcdefgh", 3, "cbadefhg")]
+        [InlineData("abcdefghi", 3, "cbadefihg")]
+        [InlineData("abcde", 3, "cbade")]
+        public void Task1Test(string s, int k, string expected)
+        {
+            Assert.Equal(expected, Indices.ReverseString(s, k));
         }
     }
 }

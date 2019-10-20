@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.IO;
+using System.Text;
 
 namespace CodingProblems
 {
-    public class Arrays
+    // Manipulations of array and string indices
+    public static class Indices
     {
         // Given an array of integers and an integer k, 
         // you need to find the total number of continuous subarrays whose sum equals to k.
@@ -119,7 +121,7 @@ namespace CodingProblems
         // https://www.hackerrank.com/challenges/2d-array/problem
         public static int CalcMaxHourglassSum(int[][] arr)
         {
-            int maxSum = int.MinValue;
+            int maxSum = Int32.MinValue;
 
             for (int y = 0; y <= 3; ++y)
             {
@@ -148,7 +150,7 @@ namespace CodingProblems
         // where the width of each bar is 1, compute how much water it is able to trap after raining.
         public static int CalcTrappedWaterAmountUsingDP(int[] heights)
         {
-            if (heights == null || !heights.Any())
+            if (heights?.Any() != true)
                 return 0;
 
             int heightsLen = heights.Length;
@@ -204,7 +206,7 @@ namespace CodingProblems
 
         public static int CalcTrappedWaterAmountUsingStack(int[] heights)
         {
-            if (heights == null || !heights.Any())
+            if (heights?.Any() != true)
                 return 0;
 
             Stack<int> previousBars = new Stack<int>();
@@ -231,11 +233,11 @@ namespace CodingProblems
             return collectedCells;
         }
 
-        // You have given a array and You have to give number of continuous subarray which the sum is zero.
+        // You have given a array and you have to give number of continuous subarray which the sum is zero.
         public static int CalcZeroFragmentsCount(int[] arr)
         {
-            int[] sums = new int[arr.Count() + 1];
-            for (int i = 0; i < arr.Count(); i++)
+            int[] sums = new int[arr.Length + 1];
+            for (int i = 0; i < arr.Length; i++)
                 sums[i + 1] = sums[i] + arr[i];
 
             int numberOfFragments = 0;
@@ -252,6 +254,37 @@ namespace CodingProblems
             }
 
             return numberOfFragments;
+        }
+
+        // Reverse String II
+        // Given a string and an integer k, you need to reverse the first k characters for every 2k characters
+        //      counting from the start of the string. If there are less than k characters left, reverse all of them.
+        // If there are less than 2k but greater than or equal to k characters, then reverse the first k characters
+        // and left the other as original.
+        // https://leetcode.com/problems/reverse-string-ii/
+        public static string ReverseString(string s, int k)
+        {
+            if (k == 1)
+                return s;
+
+            StringBuilder sb = new StringBuilder(s.Length);
+
+            for (int i = 0; i < s.Length; i += 2 * k)
+            {
+                int charsLeft = s.Length - i;
+
+                foreach (char c in s.Substring(i, charsLeft > k ? k : charsLeft).Reverse())
+                    sb.Append(c);
+
+                if (charsLeft <= k)
+                    break;
+
+                charsLeft -= k;
+
+                sb.Append(s, i + k, charsLeft > k ? k : charsLeft);
+            }
+
+            return sb.ToString();
         }
     }
 }

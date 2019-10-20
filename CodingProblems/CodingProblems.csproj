@@ -43,7 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Arrays.cs" />
+    <Compile Include="Indices.cs" />
     <Compile Include="Graphs.cs" />
     <Compile Include="Heap.cs" />
     <Compile Include="MathProblems.cs" />
