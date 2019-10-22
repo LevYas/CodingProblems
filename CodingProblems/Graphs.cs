@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace CodingProblems
 {
-    public class Graphs
+    public static class Graphs
     {
         // Given an undirected graph, return true if and only if it is bipartite.
         // https://leetcode.com/problems/is-graph-bipartite/

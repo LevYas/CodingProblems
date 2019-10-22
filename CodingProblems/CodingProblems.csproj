@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Graphs\CriticalConnectionFinder.cs" />
     <Compile Include="Indices.cs" />
     <Compile Include="Graphs.cs" />
     <Compile Include="Heap.cs" />
