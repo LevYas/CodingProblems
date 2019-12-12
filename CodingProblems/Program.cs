@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
+using System.Linq;
 
 namespace CodingProblems
 {
@@ -7,15 +9,24 @@ namespace CodingProblems
     {
         public static void Main(string[] _)
         {
-            Stopwatch sw = Stopwatch.StartNew();
+            List<long> measures = new List<long>();
 
-            for (int i = 0; i < 1000000; i++)
+            for (int j = 0; j < 10; j++)
             {
-                // Primitive performance test here...
+                Stopwatch sw = Stopwatch.StartNew();
+
+                for (int i = 0; i < 1000000; i++)
+                {
+                    // Primitive performance test here...
+                }
+
+                sw.Stop();
+                Console.WriteLine(sw.ElapsedMilliseconds);
+                measures.Add(sw.ElapsedMilliseconds);
             }
 
-            sw.Stop();
-            Console.WriteLine(sw.ElapsedMilliseconds);
+            Console.WriteLine($"Mean: {measures.Sum() / measures.Count}");
+
             Console.ReadLine();
         }
     }
