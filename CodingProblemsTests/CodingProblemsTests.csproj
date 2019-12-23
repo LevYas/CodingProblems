@@ -49,6 +49,7 @@
     <Compile Include="OtherProblemsTests.cs" />
     <Compile Include="SortingTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StringCalculatorKataTests.cs" />
     <Compile Include="Utility\PairsParser.cs" />
   </ItemGroup>
   <ItemGroup>
