@@ -48,6 +48,7 @@
     <Compile Include="Graphs.cs" />
     <Compile Include="Heap.cs" />
     <Compile Include="MathProblems.cs" />
+    <Compile Include="Numbers\BinaryOperations.cs" />
     <Compile Include="Numbers\NegabinaryOperations.cs" />
     <Compile Include="Numbers\RomanToIntegerConverter.cs" />
     <Compile Include="OtherProblems.cs" />
