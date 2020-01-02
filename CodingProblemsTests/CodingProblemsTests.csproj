@@ -46,6 +46,7 @@
     <Compile Include="IndicesTests.cs" />
     <Compile Include="MathProblemsTests.cs" />
     <Compile Include="GraphsTests.cs" />
+    <Compile Include="NumbersTests\NegabinaryOperationsTests.cs" />
     <Compile Include="OtherProblemsTests.cs" />
     <Compile Include="SortingTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
