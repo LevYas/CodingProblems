@@ -49,6 +49,7 @@
     <Compile Include="Heap.cs" />
     <Compile Include="MathProblems.cs" />
     <Compile Include="Numbers\NegabinaryOperations.cs" />
+    <Compile Include="Numbers\RomanToIntegerConverter.cs" />
     <Compile Include="OtherProblems.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
