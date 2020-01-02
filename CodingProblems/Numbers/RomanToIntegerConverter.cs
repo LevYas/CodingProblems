@@ -41,5 +41,44 @@ namespace CodingProblems.Numbers
                 default: throw new Exception();
             }
         }
+
+        // Integer to Roman.
+        // Given an integer, convert it to a roman numeral.
+        // https://leetcode.com/problems/integer-to-roman/
+        public static string IntToRoman(int num)
+        {
+            string result = "";
+
+            void extractRomanNumeral(int numeralValue, string romanValue)
+            {
+                while (num - numeralValue >= 0)
+                {
+                    result += romanValue;
+                    num -= numeralValue;
+                }
+            }
+
+            extractRomanNumeral(1000, "M");
+            extractRomanNumeral(900, "CM");
+
+            extractRomanNumeral(500, "D");
+            extractRomanNumeral(400, "CD");
+
+            extractRomanNumeral(100, "C");
+            extractRomanNumeral(90, "XC");
+
+            extractRomanNumeral(50, "L");
+            extractRomanNumeral(40, "XL");
+
+            extractRomanNumeral(10, "X");
+            extractRomanNumeral(9, "IX");
+
+            extractRomanNumeral(5, "V");
+            extractRomanNumeral(4, "IV");
+
+            extractRomanNumeral(1, "I");
+
+            return result;
+        }
     }
 }
