@@ -46,7 +46,8 @@
     <Compile Include="GraphsTests\BipartitionsFinderTests.cs" />
     <Compile Include="GraphsTests\NQueensSolverTests.cs" />
     <Compile Include="GraphsTests\SudokuSolverTests.cs" />
-    <Compile Include="IndicesTests.cs" />
+    <Compile Include="IndicesTests\OtherIndicesTests.cs" />
+    <Compile Include="IndicesTests\TrappedWaterCalculatorTests.cs" />
     <Compile Include="MathProblemTests\KnightProbabilityCalculatorTests.cs" />
     <Compile Include="MathProblemTests\OtherMathProblemsTests.cs" />
     <Compile Include="NumbersTests\BinaryOperationsTests.cs" />

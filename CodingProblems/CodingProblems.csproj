@@ -47,8 +47,9 @@
     <Compile Include="Graphs\CriticalConnectionFinder.cs" />
     <Compile Include="Graphs\NQueensSolver.cs" />
     <Compile Include="Graphs\SudokuSolver.cs" />
-    <Compile Include="Indices.cs" />
     <Compile Include="Heap.cs" />
+    <Compile Include="Indices\OtherIndicesProblems.cs" />
+    <Compile Include="Indices\TrappedWaterCalculator.cs" />
     <Compile Include="MathProblems\OtherMathProblems.cs" />
     <Compile Include="MathProblems\KnightProbabilityCalculator.cs" />
     <Compile Include="Numbers\BinaryOperations.cs" />
