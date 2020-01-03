@@ -1,23 +1,10 @@
-﻿using CodingProblems;
-using System.Collections.Generic;
+﻿using CodingProblems.Other;
 using Xunit;
 
-namespace CodingProblemsTests
+namespace CodingProblemsTests.OtherTests
 {
-    public class OtherProblemsTests
+    public class LinkedListReverserTests
     {
-        [Theory]
-        [MemberData(nameof(FindMinClassroomsAmountTestData))]
-        public void FindMinClassroomsAmountTest((int, int)[] intervals, int expected)
-        {
-            Assert.Equal(expected, OtherProblems.FindMinClassroomsAmount(intervals));
-        }
-
-        public static TheoryData<(int, int)[], int> FindMinClassroomsAmountTestData => new TheoryData<(int, int)[], int>
-            {
-                { new[] { (30, 75), (0, 50), (60, 150) }, 2 }
-            };
-
         [Theory]
         [MemberData(nameof(ReverseBetweenTestData))]
         public void ReverseBetweenTest(ListNode sourseList, int beg, int end, int[] expectedValues)
@@ -64,4 +51,5 @@ namespace CodingProblemsTests
             return head;
         }
     }
+
 }

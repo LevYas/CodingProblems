@@ -55,7 +55,8 @@
     <Compile Include="Numbers\BinaryOperations.cs" />
     <Compile Include="Numbers\NegabinaryOperations.cs" />
     <Compile Include="Numbers\RomanToIntegerConverter.cs" />
-    <Compile Include="OtherProblems.cs" />
+    <Compile Include="Other\OtherProblems.cs" />
+    <Compile Include="Other\LinkedListReverser.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sorting.cs" />
