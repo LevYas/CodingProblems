@@ -7,7 +7,7 @@ namespace CodingProblems
 {
     public static class Program
     {
-        public static void Main(string[] _)
+        public static void Main()
         {
             List<long> measures = new List<long>();
 

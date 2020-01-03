@@ -1,5 +1,6 @@
 ﻿using CodingProblems.Graphs;
 using CodingProblemsTests.Utility;
+using System;
 using Xunit;
 
 namespace CodingProblemsTests.GraphsTests
@@ -23,7 +24,7 @@ namespace CodingProblemsTests.GraphsTests
                         false
                     },
                     {
-                        new int[][] { new[] { 4, 5 }, new[] { 2 }, new[] { 1 }, new int[] { }, new[] { 0 }, new[] { 0 },},
+                        new int[][] { new[] { 4, 5 }, new[] { 2 }, new[] { 1 }, Array.Empty<int>(), new[] { 0 }, new[] { 0 },},
                         true
                     },
                     {
@@ -51,7 +52,7 @@ namespace CodingProblemsTests.GraphsTests
                     { 5, "[1,2],[2,3],[3,4],[4,5],[1,5]".ToArrays(), false },
                     { 3, "[1,2],[1,3],[2,3]".ToArrays(), false },
                     { 4, "[1,2],[1,3],[2,4]".ToArrays(), true },
-                    { 1, new int[][] { }, true },
+                    { 1, Array.Empty<int[]>(), true },
                     { 5, "[1,2],[1,3],[2,4]".ToArrays(), true },
                     { 3, "".ToArrays(), true },
                     { 5, "[1,2],[2,3],[4,5]".ToArrays(), true },

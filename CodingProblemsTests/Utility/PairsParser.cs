@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -27,8 +28,8 @@ namespace CodingProblemsTests.Utility
 
             foreach (Match match in _regex.Matches(stringedArr))
             {
-                int i1 = Int32.Parse(match.Groups["i1"].Value);
-                int i2 = Int32.Parse(match.Groups["i2"].Value);
+                int i1 = Int32.Parse(match.Groups["i1"].Value, CultureInfo.InvariantCulture);
+                int i2 = Int32.Parse(match.Groups["i2"].Value, CultureInfo.InvariantCulture);
                 lists.Add(toPair(i1, i2));
             }
 

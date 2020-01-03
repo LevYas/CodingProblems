@@ -1,14 +1,17 @@
-﻿namespace CodingProblems.Other
+﻿using System.Globalization;
+
+namespace CodingProblems.Other
 {
     public class ListNode
     {
-        public int val;
-        public ListNode next;
-        public ListNode(int x) { val = x; }
+        public ListNode(int x) { Val = x; }
+
+        public ListNode Next { get; set; }
+        public int Val { get; set; }
 
         public override string ToString()
         {
-            return $"val={val}, next='{(next == null ? "null" : next.val.ToString())}'";
+            return $"val={Val}, next='{(Next == null ? "null" : Next.Val.ToString(CultureInfo.InvariantCulture))}'";
         }
     }
 
@@ -43,21 +46,21 @@
                     break;
                 }
 
-                ListNode next = current.next;
+                ListNode next = current.Next;
 
                 if (currentPos > begPos && currentPos <= endPos)
-                    current.next = prev;
+                    current.Next = prev;
 
                 prev = current;
                 current = next;
             }
 
             if (beforeBegPosNode != null)
-                beforeBegPosNode.next = endPosNode;
+                beforeBegPosNode.Next = endPosNode;
             else
                 head = endPosNode;
 
-            begPosNode.next = afterEndPosNode;
+            begPosNode.Next = afterEndPosNode;
 
             return head;
         }

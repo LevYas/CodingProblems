@@ -24,9 +24,8 @@ namespace CodingProblemsTests.IndicesTests
         public void CalculatesMinimumBribesAmount(int[] a, string expected)
         {
             var content = new StringBuilder();
-            var writer = new StringWriter(content);
-
-            OtherIndicesProblems.CalcMinimumBribesAmount(writer, a);
+            using (var writer = new StringWriter(content))
+                OtherIndicesProblems.CalcMinimumBribesAmount(writer, a);
 
             var actualOutput = content.ToString().Replace(Environment.NewLine, "");
             Assert.Equal(expected, actualOutput);

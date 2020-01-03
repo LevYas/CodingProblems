@@ -14,8 +14,8 @@ namespace CodingProblemsTests.OtherTests
 
             foreach (int expectedVal in expectedValues)
             {
-                Assert.Equal(expectedVal, currentNode.val);
-                currentNode = currentNode.next;
+                Assert.Equal(expectedVal, currentNode.Val);
+                currentNode = currentNode.Next;
             }
         }
 
@@ -44,8 +44,8 @@ namespace CodingProblemsTests.OtherTests
             ListNode last = head;
             for (int i = 2; i <= length; i++)
             {
-                last.next = new ListNode(i);
-                last = last.next;
+                last.Next = new ListNode(i);
+                last = last.Next;
             }
 
             return head;
