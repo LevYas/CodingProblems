@@ -1,23 +1,23 @@
-﻿using CodingProblems;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Xunit;
 using CodingProblemsTests.Utility;
 using FluentAssertions;
+using CodingProblems.Graphs;
 
-namespace CodingProblemsTests
+namespace CodingProblemsTests.GraphsTests
 {
     public class CriticalConnectionFinderTests
     {
         [Theory]
         [MemberData(nameof(CriticalConnectionsTestData))]
-        public void CriticalConnectionsTest(int n, IList<IList<int>> connections, IList<IList<int>> expected)
+        public void FindsCriticalConnectionsByDfs(int n, IList<IList<int>> connections, IList<IList<int>> expected)
         {
             new CriticalConnectionFinder().FindByDfs(n, connections).Should().BeEquivalentTo(expected);
         }
 
         [Theory]
         [MemberData(nameof(CriticalConnectionsTestData))]
-        public void CriticalConnectionsBruteforceTest(int n, IList<IList<int>> connections, IList<IList<int>> expected)
+        public void FindsCriticalConnectionsByBruteForce(int n, IList<IList<int>> connections, IList<IList<int>> expected)
         {
             CriticalConnectionFinder.FindByBruteForce(n, connections).Should().BeEquivalentTo(expected);
         }

@@ -43,9 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Graphs\BipartitionsFinder.cs" />
     <Compile Include="Graphs\CriticalConnectionFinder.cs" />
+    <Compile Include="Graphs\NQueensSolver.cs" />
+    <Compile Include="Graphs\SudokuSolver.cs" />
     <Compile Include="Indices.cs" />
-    <Compile Include="Graphs.cs" />
     <Compile Include="Heap.cs" />
     <Compile Include="MathProblems.cs" />
     <Compile Include="Numbers\BinaryOperations.cs" />
