@@ -1,7 +1,7 @@
 ﻿
 namespace CodingProblems
 {
-    public class Sorting
+    public static class Sorting
     {
         // Inverted elements are considered to be "out of order". To correct an inversion, we can swap adjacent elements.
         // Print the number of inversions that must be swapped to sort each dataset.
@@ -10,7 +10,7 @@ namespace CodingProblems
         {
             int overallSwapsAmount = 0;
 
-            int currentSwapsAmount = 0;
+            int currentSwapsAmount;
             do
             {
                 currentSwapsAmount = 0;

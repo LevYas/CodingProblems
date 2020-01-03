@@ -49,7 +49,8 @@
     <Compile Include="Graphs\SudokuSolver.cs" />
     <Compile Include="Indices.cs" />
     <Compile Include="Heap.cs" />
-    <Compile Include="MathProblems.cs" />
+    <Compile Include="MathProblems\OtherMathProblems.cs" />
+    <Compile Include="MathProblems\KnightProbabilityCalculator.cs" />
     <Compile Include="Numbers\BinaryOperations.cs" />
     <Compile Include="Numbers\NegabinaryOperations.cs" />
     <Compile Include="Numbers\RomanToIntegerConverter.cs" />

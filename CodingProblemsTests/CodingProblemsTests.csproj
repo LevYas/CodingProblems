@@ -47,7 +47,8 @@
     <Compile Include="GraphsTests\NQueensSolverTests.cs" />
     <Compile Include="GraphsTests\SudokuSolverTests.cs" />
     <Compile Include="IndicesTests.cs" />
-    <Compile Include="MathProblemsTests.cs" />
+    <Compile Include="MathProblemTests\KnightProbabilityCalculatorTests.cs" />
+    <Compile Include="MathProblemTests\OtherMathProblemsTests.cs" />
     <Compile Include="NumbersTests\BinaryOperationsTests.cs" />
     <Compile Include="NumbersTests\NegabinaryOperationsTests.cs" />
     <Compile Include="NumbersTests\RomanToIntegerConverterTests.cs" />

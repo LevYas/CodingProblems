@@ -2,7 +2,7 @@
 
 namespace CodingProblems
 {
-    public class OtherProblems
+    public static class OtherProblems
     {
         // Given an array of time intervals (start, end) for classroom lectures (possibly overlapping),
         // find the minimum number of rooms required.
@@ -35,7 +35,7 @@ namespace CodingProblems
     // Reverse a linked list from position m to n. Do it in one-pass.
     // Note: 1 ≤ m ≤ n ≤ length of list.
     // https://leetcode.com/problems/reverse-linked-list-ii/
-    public class LinkedListReverser
+    public static class LinkedListReverser
     {
         public static ListNode ReverseBetween(ListNode head, int begPos, int endPos)
         {
