@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Xunit;
 
-namespace CodingProblemsTests.MathProblemTests
+namespace CodingProblemsTests.MathProblems
 {
     public class OtherMathProblemsTests
     {

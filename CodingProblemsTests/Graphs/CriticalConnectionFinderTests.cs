@@ -4,7 +4,7 @@ using CodingProblemsTests.Utility;
 using FluentAssertions;
 using CodingProblems.Graphs;
 
-namespace CodingProblemsTests.GraphsTests
+namespace CodingProblemsTests.Graphs
 {
     public class CriticalConnectionFinderTests
     {

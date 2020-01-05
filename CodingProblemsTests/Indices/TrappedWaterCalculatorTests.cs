@@ -1,7 +1,7 @@
 ﻿using CodingProblems.Indices;
 using Xunit;
 
-namespace CodingProblemsTests.IndicesTests
+namespace CodingProblemsTests.Indices
 {
     public class TrappedWaterCalculatorTests
     {

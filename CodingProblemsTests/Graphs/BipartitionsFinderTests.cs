@@ -3,7 +3,7 @@ using CodingProblemsTests.Utility;
 using System;
 using Xunit;
 
-namespace CodingProblemsTests.GraphsTests
+namespace CodingProblemsTests.Graphs
 {
     public class BipartitionsFinderTests
     {

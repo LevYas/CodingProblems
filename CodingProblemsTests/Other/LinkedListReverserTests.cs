@@ -1,7 +1,7 @@
 ﻿using CodingProblems.Other;
 using Xunit;
 
-namespace CodingProblemsTests.OtherTests
+namespace CodingProblemsTests.Other
 {
     public class LinkedListReverserTests
     {

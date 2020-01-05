@@ -1,7 +1,7 @@
 ﻿using CodingProblems.Graphs;
 using Xunit;
 
-namespace CodingProblemsTests.GraphsTests
+namespace CodingProblemsTests.Graphs
 {
     public class SudokuSolverTests
     {

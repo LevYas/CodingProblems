@@ -1,7 +1,7 @@
 ﻿using CodingProblems.Numbers;
 using Xunit;
 
-namespace CodingProblemsTests.NumbersTests
+namespace CodingProblemsTests.Numbers
 {
     public class BinaryOperationsTests
     {

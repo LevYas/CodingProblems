@@ -1,7 +1,7 @@
 ﻿using CodingProblems.Other;
 using Xunit;
 
-namespace CodingProblemsTests
+namespace CodingProblemsTests.Other
 {
     public class OtherProblemsTests
     {

@@ -1,7 +1,7 @@
 ﻿using CodingProblems.MathProblems;
 using Xunit;
 
-namespace CodingProblemsTests.MathProblemTests
+namespace CodingProblemsTests.MathProblems
 {
     public class KnightProbabilityCalculatorTests
     {

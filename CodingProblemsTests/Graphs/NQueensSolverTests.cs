@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Xunit;
 
-namespace CodingProblemsTests.GraphsTests
+namespace CodingProblemsTests.Graphs
 {
     public class NQueensSolverTests
     {
