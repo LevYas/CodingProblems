@@ -1,18 +1,18 @@
-﻿using System.Globalization;
+﻿using CodingProblems.Utility;
 
 namespace CodingProblems.Other
 {
-    public class ListNode
+    public class ListNode : DebugLinkedList
     {
-        public ListNode(int x) { Val = x; }
+        public ListNode(int x) : base(x) { }
 
-        public ListNode Next { get; set; }
-        public int Val { get; set; }
-
-        public override string ToString()
+        public ListNode Next
         {
-            return $"val={Val}, next='{(Next == null ? "null" : Next.Val.ToString(CultureInfo.InvariantCulture))}'";
+            get => NextNode as ListNode;
+            set => NextNode = value;
         }
+
+        public int Val => Value;
     }
 
     // Reverse a linked list from position m to n. Do it in one-pass.
