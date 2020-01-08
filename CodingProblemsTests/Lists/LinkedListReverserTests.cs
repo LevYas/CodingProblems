@@ -1,8 +1,8 @@
-﻿using CodingProblems.Other;
+﻿using CodingProblems.Lists;
 using CodingProblems.Utility;
 using Xunit;
 
-namespace CodingProblemsTests.Other
+namespace CodingProblemsTests.Lists
 {
     public class LinkedListReverserTests
     {

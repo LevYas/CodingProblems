@@ -1,10 +1,9 @@
-using CodingProblems.Other;
+using CodingProblems.Lists;
 using CodingProblems.Utility;
-using System;
 using System.Linq;
 using Xunit;
 
-namespace CodingProblemsTests.Other
+namespace CodingProblemsTests.Lists
 {
     public class ListCopierTests
     {

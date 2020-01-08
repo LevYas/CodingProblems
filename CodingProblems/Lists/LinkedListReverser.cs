@@ -1,6 +1,6 @@
 ﻿using CodingProblems.Utility;
 
-namespace CodingProblems.Other
+namespace CodingProblems.Lists
 {
     public class ListNode : DebugLinkedList
     {
