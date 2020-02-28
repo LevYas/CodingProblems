@@ -10,7 +10,7 @@ dotnet_diagnostic.CA1814.severity = none
 dotnet_diagnostic.CA1307.severity = suggestion
 
 # CA1305: Specify IFormatProvider
-dotnet_diagnostic.CA1305.severity = suggestion
+dotnet_diagnostic.CA1305.severity = none
 
 # IDE0011: Add braces
 csharp_prefer_braces = when_multiline:suggestion
