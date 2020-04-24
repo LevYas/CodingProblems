@@ -57,7 +57,7 @@ public:
         auto itAtTheEndOfComposedRange = itAtTheEntryAfterTheEnd; // itB
         auto itAtCurrentEntryAtTheEnd = std::prev(itAtTheEntryAfterTheEnd); // itC
 
-        auto areKeysEq = [](const K& k1, const K& k2) -> bool { return !(k1 < k2) && !(k1 < k2); };
+        auto areKeysEq = [](const K& k1, const K& k2) -> bool { return !(k1 < k2) && !(k2 < k1); };
 
         // i.e. if keyEnd == 10
         //              itC  itA, itB
