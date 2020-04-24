@@ -18,7 +18,8 @@ int main(const int argc, char *argv[])
 
    auto start = std::chrono::high_resolution_clock::now();
 
-   Result<std::vector<double>> parsingResult = parse_coefficients(argc - 1, argv + 1); // the first element is a name of this file
+   // the first arg element is a name of the executable file
+   Result<std::vector<double>> parsingResult = parse_coefficients(argc - 1, argv + 1);
 
    if (!parsingResult.error.empty())
       std::cout << "An error occured during parsing of input: " << parsingResult.error << std::endl;
