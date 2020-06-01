@@ -3,6 +3,7 @@
 #include <limits>
 
 // Efficient interval map implementation
+// The tests are located in the CppCodingProblemsTests project in the IntervalMapTests.cpp file
 
 // Only operator < and numeric_limits::lowest nesessary for keys and operator == for values,
 // so it's safer to use custom types with only needed functionality
