@@ -12,6 +12,7 @@
     </ClInclude>
     <ClInclude Include="Sorting.h" />
     <ClInclude Include="IntervalMap.h" />
+    <ClInclude Include="FrequentElementsFinder.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">

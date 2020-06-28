@@ -155,6 +155,7 @@
     <ClInclude Include="Sorting.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="IntervalMap.h" />
+    <ClInclude Include="FrequentElementsFinder.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CppCodingProblems.cpp" />
