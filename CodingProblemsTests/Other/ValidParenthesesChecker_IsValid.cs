@@ -1,9 +1,10 @@
 ﻿using CodingProblems.Other;
+using FluentAssertions;
 using Xunit;
 
 namespace CodingProblemsTests.Other
 {
-    public class ValidParenthesesCheckerTests
+    public class ValidParenthesesChecker_IsValid
     {
         [Theory]
         [InlineData("", true)]
@@ -15,7 +16,7 @@ namespace CodingProblemsTests.Other
         [InlineData("]", false)]
         public void ChecksCorrectly(string input, bool expected)
         {
-            Assert.Equal(expected, ValidParenthesesChecker.IsValid(input));
+            ValidParenthesesChecker.IsValid(input).Should().Be(expected);
         }
     }
 }

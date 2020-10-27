@@ -6,18 +6,18 @@ using CodingProblems.Graphs;
 
 namespace CodingProblemsTests.Graphs
 {
-    public class CriticalConnectionFinderTests
+    public class CriticalConnectionFinder_Find
     {
         [Theory]
         [MemberData(nameof(CriticalConnectionsTestData))]
-        public void FindsCriticalConnectionsByDfs(int n, IList<IList<int>> connections, IList<IList<int>> expected)
+        public void FindsByDfs(int n, IList<IList<int>> connections, IList<IList<int>> expected)
         {
             new CriticalConnectionFinder().FindByDfs(n, connections).Should().BeEquivalentTo(expected);
         }
 
         [Theory]
         [MemberData(nameof(CriticalConnectionsTestData))]
-        public void FindsCriticalConnectionsByBruteForce(int n, IList<IList<int>> connections, IList<IList<int>> expected)
+        public void FindsByBruteForce(int n, IList<IList<int>> connections, IList<IList<int>> expected)
         {
             CriticalConnectionFinder.FindByBruteForce(n, connections).Should().BeEquivalentTo(expected);
         }

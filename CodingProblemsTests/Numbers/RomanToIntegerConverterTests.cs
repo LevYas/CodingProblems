@@ -1,4 +1,5 @@
 ﻿using CodingProblems.Numbers;
+using FluentAssertions;
 using Xunit;
 
 namespace CodingProblemsTests.Numbers
@@ -16,7 +17,7 @@ namespace CodingProblemsTests.Numbers
         [InlineData("MCMXCIV", 1994)]
         public void ConvertsToInt(string input, int expected)
         {
-            Assert.Equal(expected, RomanToIntegerConverter.RomanToInt(input));
+            RomanToIntegerConverter.RomanToInt(input).Should().Be(expected);
         }
 
         [Theory]
@@ -30,7 +31,7 @@ namespace CodingProblemsTests.Numbers
         [InlineData(1994, "MCMXCIV")]
         public void ConvertsToRoman(int input, string expected)
         {
-            Assert.Equal(expected, RomanToIntegerConverter.IntToRoman(input));
+            RomanToIntegerConverter.IntToRoman(input).Should().Be(expected);
         }
     }
 }

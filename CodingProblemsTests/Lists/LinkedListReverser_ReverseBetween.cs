@@ -1,28 +1,29 @@
 ﻿using CodingProblems.Lists;
 using CodingProblems.Utility;
+using FluentAssertions;
 using Xunit;
 
 namespace CodingProblemsTests.Lists
 {
-    public class LinkedListReverserTests
+    public class LinkedListReverser_ReverseBetween
     {
         [Theory]
         [MemberData(nameof(ReverseBetweenTestData))]
-        public void ReverseBetweenTest(ListNode sourseList, int beg, int end, int[] expectedValues)
+        public void Works(ListNode sourceList, int beg, int end, int[] expectedValues)
         {
-            ListNode resultingList = LinkedListReverser.ReverseBetween(sourseList, beg, end);
+            ListNode resultingList = LinkedListReverser.ReverseBetween(sourceList, beg, end);
             ListNode currentNode = resultingList;
 
             foreach (int expectedVal in expectedValues)
             {
-                Assert.Equal(expectedVal, currentNode.Val);
+                currentNode.Val.Should().Be(expectedVal);
                 currentNode = currentNode.Next;
             }
         }
 
         public static object[][] ReverseBetweenTestData()
         {
-            return new object[][]
+            return new[]
             {
                 new object[] { DebugLinkedListFactory.Create<ListNode>(new[] { 1 }), 1, 1, new[] { 1 } },
 

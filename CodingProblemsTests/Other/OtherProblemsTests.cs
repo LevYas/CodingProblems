@@ -1,4 +1,5 @@
 ﻿using CodingProblems.Other;
+using FluentAssertions;
 using Xunit;
 
 namespace CodingProblemsTests.Other
@@ -9,7 +10,7 @@ namespace CodingProblemsTests.Other
         [MemberData(nameof(FindMinClassroomsAmountTestData))]
         public void FindMinClassroomsAmountTest((int, int)[] intervals, int expected)
         {
-            Assert.Equal(expected, OtherProblems.FindMinClassroomsAmount(intervals));
+            OtherProblems.FindMinClassroomsAmount(intervals).Should().Be(expected);
         }
 
         public static TheoryData<(int, int)[], int> FindMinClassroomsAmountTestData => new TheoryData<(int, int)[], int>

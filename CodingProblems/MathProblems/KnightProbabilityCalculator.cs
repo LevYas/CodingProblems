@@ -13,13 +13,13 @@ namespace CodingProblems.MathProblems
         // https://leetcode.com/problems/knight-probability-in-chessboard/
         public static double CalcKnightProbability(int boardSize, int movesAmount, int startRow, int startColumn)
         {
-            ChessCoord[] moveOptions = new[] { new ChessCoord(1, 2), new ChessCoord(-1, 2),
+            ChessCoord[] moveOptions = { new ChessCoord(1, 2), new ChessCoord(-1, 2),
                                           new ChessCoord(2, 1), new ChessCoord(2, -1),
                                           new ChessCoord(-1, -2), new ChessCoord(1, -2),
                                           new ChessCoord(-2, -1), new ChessCoord(-2, 1)};
 
             // the snapshots of probabilities for each cell for the current and the next moves
-            double[][,] boardSnapshots = new double[][,] { new double[boardSize, boardSize], new double[boardSize, boardSize] };
+            double[][,] boardSnapshots = { new double[boardSize, boardSize], new double[boardSize, boardSize] };
 
             int curIdx = 0; // the switchable "pointers" to the appropriate boards
             int nextIdx = 1;
@@ -40,7 +40,7 @@ namespace CodingProblems.MathProblems
 
                     foreach (ChessCoord moveOption in moveOptions)
                     {
-                        var resPos = new ChessCoord(row, col) + moveOption;
+                        ChessCoord resPos = new ChessCoord(row, col) + moveOption;
 
                         if (resPos.IsInsideTheBoard(boardSize))
                             boardSnapshots[nextIdx][resPos.Row, resPos.Column] += sourceValue / 8; // 8 possible moves from each pos

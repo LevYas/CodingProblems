@@ -16,7 +16,7 @@ namespace CodingProblems.Other
             if (String.IsNullOrEmpty(str))
                 return true;
 
-            Stack<char> parentheses = new Stack<char>(str.Length / 2);
+            var parentheses = new Stack<char>(str.Length / 2);
 
             foreach (char parenthesis in str)
             {
@@ -34,15 +34,12 @@ namespace CodingProblems.Other
         }
 
         private static bool areMatching(char opening, char closing)
-        {
-            switch (closing)
+            => closing switch
             {
-                case ')': return opening == '(';
-                case ']': return opening == '[';
-                case '}': return opening == '{';
-                default:
-                    return false;
-            }
-        }
+                ')' => opening == '(',
+                ']' => opening == '[',
+                '}' => opening == '{',
+                _ => false,
+            };
     }
 }

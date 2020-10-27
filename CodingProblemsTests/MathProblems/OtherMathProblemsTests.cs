@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using FluentAssertions;
 using Xunit;
 
 namespace CodingProblemsTests.MathProblems
@@ -17,30 +18,26 @@ namespace CodingProblemsTests.MathProblems
         [InlineData(15, 154)]
         public void GetNthPerfectNumberTest(int n, int expected)
         {
-            Assert.Equal(expected, OtherMathProblems.CalcNthPerfectNumber(n));
+            OtherMathProblems.CalcNthPerfectNumber(n).Should().Be(expected);
         }
 
         [Fact]
         public void CalcPiUsingMonteCarloTest()
         {
-            Assert.True(Math.Abs(Math.PI - OtherMathProblems.CalcPiUsingMonteCarlo()) < 1e-3);
+            OtherMathProblems.CalcPiUsingMonteCarlo().Should().BeApproximately(Math.PI, 3);
         }
 
         [Theory]
         [MemberData(nameof(SetForPowerSetTestData))]
-        public void SetToPowerSetGeneralTest(IEnumerable<int> set)
+        public void SetToPowerSetGeneralTest(int[] set)
         {
-            var sets = OtherMathProblems.SetToPowerSet(set);
-            Assert.Equal(8, sets.Count);
-            Assert.Equal(set.Count(), sets.SelectMany(en => en).Distinct().Count());
+            IList<IList<int>> sets = OtherMathProblems.SetToPowerSet(set);
+
+            sets.Should().HaveCount(8);
+            sets.SelectMany(en => en).Distinct().Should().HaveCount(set.Length);
         }
 
-        public static TheoryData<IEnumerable<int>> SetForPowerSetTestData
-        {
-            get => new TheoryData<IEnumerable<int>>
-                {
-                    new[] { 1, 2, 3 }
-                };
-        }
+        public static TheoryData<int[]> SetForPowerSetTestData
+            => new TheoryData<int[]> {new[] { 1, 2, 3 }};
     }
 }

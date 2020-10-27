@@ -1,4 +1,5 @@
 ﻿using CodingProblems.Numbers;
+using FluentAssertions;
 using Xunit;
 
 namespace CodingProblemsTests.Numbers
@@ -6,41 +7,41 @@ namespace CodingProblemsTests.Numbers
     public class NegabinaryOperationsTests
     {
         [Theory]
-        [InlineData(9, new int[] { 1, 1, 0, 0, 1 })]
-        [InlineData(-9, new int[] { 1, 0, 1, 1 })]
-        [InlineData(40, new int[] { 1, 1, 1, 1, 0, 0, 0 })]
+        [InlineData(9, new[] { 1, 1, 0, 0, 1 })]
+        [InlineData(-9, new[] { 1, 0, 1, 1 })]
+        [InlineData(40, new[] { 1, 1, 1, 1, 0, 0, 0 })]
         public void ToNegabinaryTest(int number, int[] expected)
         {
-            Assert.Equal(expected, NegabinaryOperations.ToNegabinary(number));
+            NegabinaryOperations.ToNegabinary(number).Should().BeEquivalentTo(expected);
         }
 
         [Theory]
-        [InlineData(new int[] { 1, 1, 1, 1, 1 }, 11)]
-        [InlineData(new int[] { 1, 0, 1 }, 5)]
-        [InlineData(new int[] { 1, 1, 0, 0, 1 }, 9)]
-        [InlineData(new int[] { 1, 0, 1, 1 }, -9)]
-        [InlineData(new int[] { 1, 1, 1, 1, 0, 0, 0 }, 40)]
+        [InlineData(new[] { 1, 1, 1, 1, 1 }, 11)]
+        [InlineData(new[] { 1, 0, 1 }, 5)]
+        [InlineData(new[] { 1, 1, 0, 0, 1 }, 9)]
+        [InlineData(new[] { 1, 0, 1, 1 }, -9)]
+        [InlineData(new[] { 1, 1, 1, 1, 0, 0, 0 }, 40)]
         public void FromNegabinaryTest(int[] arr, int expected)
         {
-            Assert.Equal(expected, NegabinaryOperations.FromNegabinary(arr));
+            NegabinaryOperations.FromNegabinary(arr).Should().Be(expected);
         }
 
         [Theory]
-        [InlineData(new int[] { 1, 1, 1, 1, 1 }, new int[] { 1, 0, 1 }, new int[] { 1, 0, 0, 0, 0 })]
+        [InlineData(new[] { 1, 1, 1, 1, 1 }, new[] { 1, 0, 1 }, new[] { 1, 0, 0, 0, 0 })]
         public void AddNegabinarySimpleTest(int[] arr1, int[] arr2, int[] expected)
         {
-            Assert.Equal(expected, NegabinaryOperations.AddNegabinarySimple(arr1, arr2));
+            NegabinaryOperations.AddNegabinarySimple(arr1, arr2).Should().BeEquivalentTo(expected);
         }
 
         [Theory]
-        [InlineData(new int[] { 0 }, new int[] { 0 }, new int[] { 0 })]
-        [InlineData(new int[] { 1, 1 }, new int[] { 1 }, new int[] { 0 })]
-        [InlineData(new int[] { 1 }, new int[] { 1, 1, 0, 1 }, new int[] { 1, 0 })]
-        [InlineData(new int[] { 1, 1, 1, 1, 1 }, new int[] { 1, 0, 1 }, new int[] { 1, 0, 0, 0, 0 })]
-        [InlineData(new int[] { 1, 0, 1, 0, 1, 0, 1 }, new int[] { 1, 1, 1, 0, 1, 0, 0 }, new int[] { 1, 1, 0, 0, 1, 1, 0, 0, 1 })]
+        [InlineData(new[] { 0 }, new[] { 0 }, new[] { 0 })]
+        [InlineData(new[] { 1, 1 }, new[] { 1 }, new[] { 0 })]
+        [InlineData(new[] { 1 }, new[] { 1, 1, 0, 1 }, new[] { 1, 0 })]
+        [InlineData(new[] { 1, 1, 1, 1, 1 }, new[] { 1, 0, 1 }, new[] { 1, 0, 0, 0, 0 })]
+        [InlineData(new[] { 1, 0, 1, 0, 1, 0, 1 }, new[] { 1, 1, 1, 0, 1, 0, 0 }, new[] { 1, 1, 0, 0, 1, 1, 0, 0, 1 })]
         public void AddNegabinaryTest(int[] arr1, int[] arr2, int[] expected)
         {
-            Assert.Equal(expected, NegabinaryOperations.AddNegabinary(arr1, arr2));
+            NegabinaryOperations.AddNegabinary(arr1, arr2).Should().BeEquivalentTo(expected);
         }
     }
 }

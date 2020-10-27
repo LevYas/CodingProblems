@@ -11,7 +11,7 @@ namespace CodingProblemsTests.Utility
 
         public static int[][] ToArrays(this string stringedArr)
         {
-            return ToPairs(stringedArr, (i1, i2) => new int[] { i1, i2 }).ToArray();
+            return ToPairs(stringedArr, (i1, i2) => new[] { i1, i2 }).ToArray();
         }
 
         public static List<IList<int>> ToILists(this string stringedArr)

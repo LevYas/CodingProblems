@@ -1,9 +1,10 @@
 using CodingProblems.Indices;
+using FluentAssertions;
 using Xunit;
 
 namespace CodingProblemsTests.Indices
 {
-    public class ClimbingStairsSolverTests
+    public class ClimbingStairsSolver_ClimbStairs
     {
         [Theory]
         [InlineData(0, 1)]
@@ -13,9 +14,9 @@ namespace CodingProblemsTests.Indices
         [InlineData(4, 5)]
         [InlineData(5, 8)]
         [InlineData(6, 13)]
-        public void ClimbStairsWorks(int height, int expected)
+        public void Works(int height, int expected)
         {
-            Assert.Equal(expected, ClimbingStairsSolver.ClimbStairs(height));
+            ClimbingStairsSolver.ClimbStairs(height).Should().Be(expected);
         }
     }
 }

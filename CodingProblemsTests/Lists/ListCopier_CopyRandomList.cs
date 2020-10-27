@@ -1,30 +1,31 @@
 using CodingProblems.Lists;
 using CodingProblems.Utility;
 using System.Linq;
+using FluentAssertions;
 using Xunit;
 
 namespace CodingProblemsTests.Lists
 {
-    public class ListCopierTests
+    public class ListCopier_CopyRandomList
     {
         [Theory]
         [MemberData(nameof(CopyRandomListTestData))]
-        public void CopiedListContainsTheSameValues(NodeWithRandom input)
+        public void PreservesValues(NodeWithRandom input)
         {
-            string initialListVals = input.PrintValues();
+            string initialListValues = input.PrintValues();
 
-            Assert.Equal(initialListVals, ListCopier.CopyRandomList(input).PrintValues());
+            ListCopier.CopyRandomList(input).PrintValues().Should().Be(initialListValues);
         }
 
         [Theory]
         [MemberData(nameof(CopyRandomListTestData))]
-        public void CopiedListConsistOfAnotherObjects(NodeWithRandom input)
+        public void MakesNewObjects(NodeWithRandom input)
         {
-            var copied = ListCopier.CopyRandomList(input);
+            NodeWithRandom copied = ListCopier.CopyRandomList(input);
 
             while (input != null)
             {
-                Assert.NotSame(input, copied);
+                copied.Should().NotBe(input);
                 input = input.next;
                 copied = copied.next;
             }
@@ -33,7 +34,7 @@ namespace CodingProblemsTests.Lists
         [Fact]
         public void ReturnsNullOnEmptyInput()
         {
-            Assert.Null(ListCopier.CopyRandomList(null));
+            ListCopier.CopyRandomList(null).Should().BeNull();
         }
 
         public static TheoryData<NodeWithRandom> CopyRandomListTestData => new TheoryData<NodeWithRandom>

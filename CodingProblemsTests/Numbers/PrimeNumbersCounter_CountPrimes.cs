@@ -1,9 +1,10 @@
 using CodingProblems.Numbers;
+using FluentAssertions;
 using Xunit;
 
 namespace CodingProblemsTests.Numbers
 {
-    public class PrimeNumbersCounterTests
+    public class PrimeNumbersCounter_CountPrimes
     {
         [Theory]
         [InlineData(0, 0)]
@@ -17,9 +18,9 @@ namespace CodingProblemsTests.Numbers
         [InlineData(8, 4)]
         [InlineData(9, 4)]
         [InlineData(10, 4)]
-        public void CountPrimesWorks(int input, int expected)
+        public void Works(int input, int expected)
         {
-            Assert.Equal(expected, PrimeNumbersCounter.CountPrimes(input));
+            PrimeNumbersCounter.CountPrimes(input).Should().Be(expected);
         }
     }
 }

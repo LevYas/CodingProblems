@@ -7,11 +7,11 @@ using Xunit;
 
 namespace CodingProblemsTests.Other
 {
-    public class CinemaSeatAllocatorTests
+    public class CinemaSeatAllocator_MaxNumberOfFamilies
     {
         [Theory]
         [MemberData(nameof(CinemaSeatAllocatorTestData))]
-        public void SolutionWorks(int numberOfRows, int[][] reservedSeats, int expected)
+        public void WorksCorrectly(int numberOfRows, int[][] reservedSeats, int expected)
         {
             CinemaSeatAllocator.MaxNumberOfFamilies(numberOfRows, reservedSeats).Should().Be(expected);
         }
@@ -37,7 +37,7 @@ namespace CodingProblemsTests.Other
             };
 
         [Fact]
-        public void SolutionWorksTillTheLimits()
+        public void WorksTillTheLimits()
         {
             const int numberOfRows = 1000_000_000;
             var seats = new List<int[]>();

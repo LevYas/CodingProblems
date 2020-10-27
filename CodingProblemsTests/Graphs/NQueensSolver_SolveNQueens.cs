@@ -1,16 +1,17 @@
 ﻿using CodingProblems.Graphs;
 using System.Collections.Generic;
+using FluentAssertions;
 using Xunit;
 
 namespace CodingProblemsTests.Graphs
 {
-    public class NQueensSolverTests
+    public class NQueensSolver_SolveNQueens
     {
         [Theory]
         [MemberData(nameof(TestData))]
         public void SolvesNQueensPuzzle(int numberOfQueensAndSize, int solutionsAmount, IList<IList<string>> expectedBoards = null)
         {
-            var result = NQueensSolver.SolveNQueens(numberOfQueensAndSize);
+            IList<IList<string>> result = NQueensSolver.SolveNQueens(numberOfQueensAndSize);
 
             Assert.Equal(solutionsAmount, result.Count);
 
@@ -20,13 +21,13 @@ namespace CodingProblemsTests.Graphs
             for (int resultIdx = 0; resultIdx < expectedBoards.Count; resultIdx++)
             {
                 for (int rowIdx = 0; rowIdx < expectedBoards[resultIdx].Count; rowIdx++)
-                    Assert.Equal(expectedBoards[resultIdx][rowIdx], result[resultIdx][rowIdx]);
+                    result[resultIdx][rowIdx].Should().Be(expectedBoards[resultIdx][rowIdx]);
             }
         }
 
         public static object[][] TestData()
         {
-            return new object[][]
+            return new[]
             {
                 new object[] { 0, 1 },
                 new object[] { 1, 1, new List<IList<string>>() { new List<string>() { "Q" } } },
