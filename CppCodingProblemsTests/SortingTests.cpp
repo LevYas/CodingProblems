@@ -3,9 +3,7 @@
 
 typedef std::tuple<long, std::vector<int>> CountInversionParameter;
 class CountInversionsTestsFx : public ::testing::TestWithParam<CountInversionParameter>
-{
-public:
-};
+{};
 
 TEST_P(CountInversionsTestsFx, CountInversionsTest)
 {

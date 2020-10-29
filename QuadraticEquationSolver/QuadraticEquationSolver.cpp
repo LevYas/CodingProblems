@@ -22,12 +22,12 @@ int main(const int argc, char *argv[])
    Result<std::vector<double>> parsingResult = parse_coefficients(argc - 1, argv + 1);
 
    if (!parsingResult.error.empty())
-      std::cout << "An error occured during parsing of input: " << parsingResult.error << std::endl;
+      std::cout << "An error occurred during parsing of input: " << parsingResult.error << std::endl;
 
    Result<std::vector<CoefficientsKit*>> divisionResult = divide_into_triplets(parsingResult.value);
 
    if (!divisionResult.error.empty())
-      std::cout << "An error occured during division into triplets: " << divisionResult.error << std::endl;
+      std::cout << "An error occurred during division into triplets: " << divisionResult.error << std::endl;
 
    for (const CoefficientsKit* const coefKit : divisionResult.value)
    {
@@ -58,7 +58,7 @@ int main(const int argc, char *argv[])
    auto finish = std::chrono::high_resolution_clock::now();
 
    auto microseconds = std::chrono::duration_cast<std::chrono::microseconds>(finish - start);
-   std::cout << microseconds.count() << "µs\n";
+   std::cout << microseconds.count() << "µs" << std::endl;
 
    return 0;
 }

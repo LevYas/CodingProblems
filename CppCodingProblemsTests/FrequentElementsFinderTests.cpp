@@ -3,9 +3,7 @@
 
 typedef std::tuple<std::vector<int>, std::vector<int>, int> FrequentElementsFinderParameter;
 class FrequentElementsFinderTestsFx : public ::testing::TestWithParam<FrequentElementsFinderParameter>
-{
-public:
-};
+{};
 
 TEST_P(FrequentElementsFinderTestsFx, FrequentElementsFinderTest)
 {

@@ -5,7 +5,7 @@
 // Efficient interval map implementation
 // The tests are located in the CppCodingProblemsTests project in the IntervalMapTests.cpp file
 
-// Only operator < and numeric_limits::lowest nesessary for keys and operator == for values,
+// Only operator < and numeric_limits::lowest necessary for keys and operator == for values,
 // so it's safer to use custom types with only needed functionality
 
 struct key_type
@@ -13,7 +13,7 @@ struct key_type
     int value;
 };
 
-bool operator <(const key_type& key1, const key_type& key2)
+inline bool operator <(const key_type& key1, const key_type& key2)
 {
     return key1.value < key2.value;
 }
@@ -23,7 +23,7 @@ struct value_type
     char value;
 };
 
-bool operator == (const value_type& val1, const value_type& val2)
+inline bool operator == (const value_type& val1, const value_type& val2)
 {
     return val1.value == val2.value;
 }
@@ -33,10 +33,10 @@ namespace std {
     public:
         static key_type lowest() { 
             return key_type{ numeric_limits<int>::lowest() };
-        };
+        }
         static key_type max() {
             return key_type{ numeric_limits<int>::max() };
-        };
+        }
     };
 }
 
@@ -115,7 +115,7 @@ public:
         return (--_map.upper_bound(key))->second;
     }
 
-    bool checkCanonicalness()
+    bool checkIfCanonical()
     {
         auto itCurElem = _map.begin();
 

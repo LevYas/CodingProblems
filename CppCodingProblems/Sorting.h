@@ -2,9 +2,9 @@
 #include <vector>
 #include <algorithm>
 
-long mergeAndCount(std::vector<int>& arr, std::vector<int>& temp, size_t startIdx, size_t middleIdx, size_t endIdx)
+inline long mergeAndCount(std::vector<int>& arr, std::vector<int>& temp, size_t startIdx, size_t middleIdx, size_t endIdx)
 {
-    long inversionsAmount = 0;
+    size_t inversionsAmount = 0;
     
     size_t leftCursor = startIdx, rightCursor = middleIdx + 1;
 
@@ -36,17 +36,17 @@ long mergeAndCount(std::vector<int>& arr, std::vector<int>& temp, size_t startId
 
     std::copy(temp.begin() + startIdx, temp.begin() + endIdx + 1, arr.begin() + startIdx);
 
-    return inversionsAmount;
+    return static_cast<long>(inversionsAmount);
 }
 
-long sortAndCount(std::vector<int>& arr, std::vector<int>& temp, size_t startIdx, size_t endIdx)
+inline long sortAndCount(std::vector<int>& arr, std::vector<int>& temp, size_t startIdx, size_t endIdx)
 {
     if (startIdx == endIdx)
         return 0;
 
     long swapsAmount = 0;
 
-    size_t middle = startIdx + (endIdx - startIdx) / 2;
+    const size_t middle = startIdx + (endIdx - startIdx) / 2;
     swapsAmount += sortAndCount(arr, temp, startIdx, middle);
     swapsAmount += sortAndCount(arr, temp, middle + 1, endIdx);
     swapsAmount += mergeAndCount(arr, temp, startIdx, middle, endIdx);    
@@ -57,7 +57,7 @@ long sortAndCount(std::vector<int>& arr, std::vector<int>& temp, size_t startIdx
 // Inverted elements are considered to be "out of order". To correct an inversion, we can swap adjacent elements.
 // Print the number of inversions that must be swapped to sort each dataset.
 // https://www.hackerrank.com/challenges/ctci-merge-sort/problem
-long countInversions(std::vector<int> arr)
+inline long countInversions(std::vector<int> arr)
 {
     std::vector<int> temp(arr.size());
     return sortAndCount(arr, temp, 0, arr.size() - 1);

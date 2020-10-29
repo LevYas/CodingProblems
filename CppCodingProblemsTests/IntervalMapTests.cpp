@@ -31,7 +31,7 @@ void assignAndCheck(interval_map<key_type, value_type>& im, int beg, int end, ch
     else
         ASSERT_EQ(valAfterTheRange, im[key_type{ end }]);
 
-    ASSERT_TRUE(im.checkCanonicalness());
+    ASSERT_TRUE(im.checkIfCanonical());
 }
 
 interval_map<key_type, value_type> createZfilledMap()

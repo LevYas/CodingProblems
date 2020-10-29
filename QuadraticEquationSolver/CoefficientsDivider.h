@@ -15,13 +15,13 @@ struct CoefficientsKit
 inline Result<std::vector<CoefficientsKit*>> divide_into_triplets(std::vector<double>& coefficients)
 {
    const size_t tripletsCount = coefficients.size() / 3;
-   const size_t unusedCoefsAmount = coefficients.size() % 3;
+   const size_t unusedCoeffsAmount = coefficients.size() % 3;
 
    Result<std::vector<CoefficientsKit*>> result;
    result.value.reserve(tripletsCount);
 
-   if (unusedCoefsAmount != 0)
-      result.error = sstr() << "Invalid coefficients count, last " << unusedCoefsAmount << " coefficient(s) are ignored.";
+   if (unusedCoeffsAmount != 0)
+      result.error = sstr() << "Invalid coefficients count, last " << unusedCoeffsAmount << " coefficient(s) are ignored.";
 
    for (size_t i = 0; i < tripletsCount; ++i)
       result.value.push_back(reinterpret_cast<CoefficientsKit*>(&coefficients[i * 3]));

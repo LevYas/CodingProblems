@@ -1,7 +1,7 @@
 #pragma once
 #include <sstream>
 
-// wrapper for std::stringstream for making one-line string formattings
+// wrapper for std::stringstream for making one-line string formatting
 class sstr final
 {
 private:
