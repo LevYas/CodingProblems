@@ -7,7 +7,7 @@ Here are my tested solutions to some coding problems.
 They couldn't advertise my architecture design skills but good enough to show my approach to write clean, testable, and effective code.
 
 ## The solution structure
-1. **CodingProblems:** different coding problems solved using C# and .NET Core. Inside the project, you will find solved problems on different topics: graphs, array indices, lists, math, numerical systems, sorting, heap, and others. All the algorithms are good in performance, usually, they're faster than 80-90% of submissions according to LeetCode metrics.
+1. **CodingProblems:** different coding problems solved using C# and .NET. Inside the project, you will find solved problems on different topics: graphs, array indices, lists, math, numerical systems, sorting, heap, and others. All the algorithms are good in performance, usually, they're faster than 80-90% of submissions according to LeetCode metrics.
 
 2. **CodingProblemsTests:** unit tests for the previous project written using xUnit. Project folders are the same as in project-under-tests.
 
@@ -24,7 +24,7 @@ They couldn't advertise my architecture design skills but good enough to show my
 
 ### Prerequisites
 1. Visual Studio 2019 or later (Community Edition is enough) with the following components:
-    1. .NET Core 3.1 SDK
+    1. .NET 5 SDK
     1. C++ development workload
     1. Windows 10 SDK  
 
