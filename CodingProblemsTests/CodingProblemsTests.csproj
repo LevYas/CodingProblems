@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net5</TargetFramework>
 
     <IsPackable>false</IsPackable>
 
@@ -11,10 +11,6 @@
     <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
     <OutputPath>..\Bin\$(Configuration)\$(Platform)\</OutputPath>
   </PropertyGroup>
-
-  <ItemGroup>
-    <None Remove="Other\WordLadderTests.cs~RF14f65d00.TMP" />
-  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="FluentAssertions" Version="5.10.0" />
