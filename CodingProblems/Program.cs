@@ -3,31 +3,30 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 
-namespace CodingProblems
+namespace CodingProblems;
+
+public static class Program
 {
-    public static class Program
+    public static void Main()
     {
-        public static void Main()
+        List<long> measures = new List<long>();
+
+        for (int j = 0; j < 10; j++)
         {
-            List<long> measures = new List<long>();
+            Stopwatch sw = Stopwatch.StartNew();
 
-            for (int j = 0; j < 10; j++)
+            for (int i = 0; i < 1000000; i++)
             {
-                Stopwatch sw = Stopwatch.StartNew();
-
-                for (int i = 0; i < 1000000; i++)
-                {
-                    // Primitive performance test here...
-                }
-
-                sw.Stop();
-                Console.WriteLine(sw.ElapsedMilliseconds);
-                measures.Add(sw.ElapsedMilliseconds);
+                // Primitive performance test here...
             }
 
-            Console.WriteLine($"Mean: {measures.Sum() / measures.Count}");
-
-            Console.ReadLine();
+            sw.Stop();
+            Console.WriteLine(sw.ElapsedMilliseconds);
+            measures.Add(sw.ElapsedMilliseconds);
         }
+
+        Console.WriteLine($"Mean: {measures.Sum() / measures.Count}");
+
+        Console.ReadLine();
     }
 }

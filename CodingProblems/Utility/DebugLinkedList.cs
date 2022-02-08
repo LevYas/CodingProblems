@@ -2,59 +2,58 @@
 using System.Globalization;
 using System.Text;
 
-namespace CodingProblems.Utility
+namespace CodingProblems.Utility;
+
+public abstract class DebugLinkedList
 {
-    public abstract class DebugLinkedList
+    public DebugLinkedList(int x) { Value = x; }
+
+    public DebugLinkedList NextNode { get; set; }
+    protected int Value { get; set; }
+    public int Index { get; set; } = 0;
+
+    public TList ForAll<TList>(Action<TList> action) where TList: DebugLinkedList
     {
-        public DebugLinkedList(int x) { Value = x; }
+        TList current = (TList)this;
 
-        public DebugLinkedList NextNode { get; set; }
-        protected int Value { get; set; }
-        public int Index { get; set; } = 0;
-
-        public TList ForAll<TList>(Action<TList> action) where TList: DebugLinkedList
+        while (current != null)
         {
-            TList current = (TList)this;
+            action(current);
+            current = (TList)current.NextNode;
+        }
 
-            while (current != null)
+        return (TList)this;
+    }
+
+    public DebugLinkedList this[int key]
+    {
+        get
+        {
+            DebugLinkedList current = this;
+            while (current.Index != key)
             {
-                action(current);
-                current = (TList)current.NextNode;
+                if (current.NextNode != null)
+                    current = current.NextNode;
+                else
+                    throw new ArgumentOutOfRangeException(nameof(key));
+
+                continue;
             }
 
-            return (TList)this;
+            return current;
         }
+    }
 
-        public DebugLinkedList this[int key]
-        {
-            get
-            {
-                DebugLinkedList current = this;
-                while (current.Index != key)
-                {
-                    if (current.NextNode != null)
-                        current = current.NextNode;
-                    else
-                        throw new ArgumentOutOfRangeException(nameof(key));
+    public string PrintValues()
+    {
+        StringBuilder sb = new StringBuilder();
+        ForAll<DebugLinkedList>(node => sb.Append($"{node.Value}" + (node.NextNode == null ? "" : ",")));
+        return sb.ToString();
+    }
 
-                    continue;
-                }
-
-                return current;
-            }
-        }
-
-        public string PrintValues()
-        {
-            StringBuilder sb = new StringBuilder();
-            ForAll<DebugLinkedList>(node => sb.Append($"{node.Value}" + (node.NextNode == null ? "" : ",")));
-            return sb.ToString();
-        }
-
-        public override string ToString()
-        {
-            string nextNodeValue = NextNode == null ? "null" : NextNode.Value.ToString(CultureInfo.InvariantCulture);
-            return $"val= {Value}, next= {nextNodeValue}";
-        }
+    public override string ToString()
+    {
+        string nextNodeValue = NextNode == null ? "null" : NextNode.Value.ToString(CultureInfo.InvariantCulture);
+        return $"val= {Value}, next= {nextNodeValue}";
     }
 }
