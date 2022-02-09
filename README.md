@@ -23,10 +23,10 @@ They couldn't advertise my architecture design skills but good enough to show my
 ## Building and running test on Windows
 
 ### Prerequisites
-1. Visual Studio 2019 or later (Community Edition is enough) with the following components:
-    1. .NET 5 SDK
+1. Visual Studio 2022 or later (Community Edition is enough) with the following components:
+    1. .NET 6 SDK
     1. C++ development workload
-    1. Windows 10 SDK  
+    1. Windows 10 SDK
 
 ### Building
 1. Open the solution file and execute the "Build solution" command.
