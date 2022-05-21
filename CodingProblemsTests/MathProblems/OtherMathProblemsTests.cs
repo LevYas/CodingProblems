@@ -37,6 +37,5 @@ public class OtherMathProblemsTests
         sets.SelectMany(en => en).Distinct().Should().HaveCount(set.Length);
     }
 
-    public static TheoryData<int[]> SetForPowerSetTestData
-        => new TheoryData<int[]> {new[] { 1, 2, 3 }};
+    public static TheoryData<int[]> SetForPowerSetTestData => new() {new[] { 1, 2, 3 }};
 }

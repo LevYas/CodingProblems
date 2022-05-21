@@ -16,7 +16,7 @@ public class BipartitionsFinder_IsGraphBipartite
     }
 
     public static TheoryData<int[][], bool> ArrsForBipartitionCheck
-        => new TheoryData<int[][], bool>
+        => new()
         {
             { "[1,3],[0,2],[1,3],[0,2]".ToArrays(), true },
             {
@@ -45,7 +45,7 @@ public class BipartitionsFinder_IsGraphBipartite
     }
 
     public static TheoryData<int, int[][], bool> ArrsForPossibleBipartition
-        => new TheoryData<int, int[][], bool>
+        => new()
         {
             { 5, "[1,2],[2,3],[3,4],[4,5],[1,5]".ToArrays(), false },
             { 3, "[1,2],[1,3],[2,3]".ToArrays(), false },

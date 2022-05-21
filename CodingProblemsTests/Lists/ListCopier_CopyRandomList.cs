@@ -37,7 +37,7 @@ public class ListCopier_CopyRandomList
         ListCopier.CopyRandomList(null).Should().BeNull();
     }
 
-    public static TheoryData<NodeWithRandom> CopyRandomListTestData => new TheoryData<NodeWithRandom>
+    public static TheoryData<NodeWithRandom> CopyRandomListTestData => new()
     {
         createListWithRndValues(new (int, int?)[] { (0, 0), (1, 2), (2, null), (3, 1) }),
         createListWithRndValues(new (int, int?)[] { (7, null), (13, 0), (11, 4), (10, 2), (1, 0) }),

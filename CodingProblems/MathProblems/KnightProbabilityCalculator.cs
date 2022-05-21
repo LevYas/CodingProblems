@@ -13,10 +13,10 @@ public static class KnightProbabilityCalculator
     // https://leetcode.com/problems/knight-probability-in-chessboard/
     public static double CalcKnightProbability(int boardSize, int movesAmount, int startRow, int startColumn)
     {
-        ChessCoord[] moveOptions = { new ChessCoord(1, 2), new ChessCoord(-1, 2),
-            new ChessCoord(2, 1), new ChessCoord(2, -1),
-            new ChessCoord(-1, -2), new ChessCoord(1, -2),
-            new ChessCoord(-2, -1), new ChessCoord(-2, 1)};
+        ChessCoord[] moveOptions = { new(1, 2), new(-1, 2),
+            new(2, 1), new(2, -1),
+            new(-1, -2), new(1, -2),
+            new(-2, -1), new(-2, 1)};
 
         // the snapshots of probabilities for each cell for the current and the next moves
         double[][,] boardSnapshots = { new double[boardSize, boardSize], new double[boardSize, boardSize] };
@@ -78,7 +78,7 @@ public static class KnightProbabilityCalculator
 
         public bool IsInsideTheBoard(int boardSize) => Row >= 0 && Column >= 0 && Row < boardSize && Column < boardSize;
 
-        public static ChessCoord operator +(ChessCoord p1, ChessCoord p2) => new ChessCoord(p1.Row + p2.Row, p1.Column + p2.Column);
+        public static ChessCoord operator +(ChessCoord p1, ChessCoord p2) => new(p1.Row + p2.Row, p1.Column + p2.Column);
 
         public override string ToString() => $"row {Row}, col {Column}";
     }

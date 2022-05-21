@@ -7,7 +7,7 @@ namespace CodingProblemsTests.Utility;
 
 public static class PairsParser
 {
-    private static readonly Regex _regex = new Regex(@"\[(?<i1>\d+),\s?(?<i2>\d+)\]");
+    private static readonly Regex _regex = new(@"\[(?<i1>\d+),\s?(?<i2>\d+)\]");
 
     public static int[][] ToArrays(this string stringedArr)
     {

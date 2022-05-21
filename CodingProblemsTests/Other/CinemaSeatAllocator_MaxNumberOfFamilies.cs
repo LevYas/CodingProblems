@@ -17,7 +17,7 @@ public class CinemaSeatAllocator_MaxNumberOfFamilies
     }
 
     public static TheoryData<int, int[][], int> CinemaSeatAllocatorTestData
-        => new TheoryData<int, int[][], int>
+        => new()
         {
             { 2, "[1,1],[2,6],[1,3]".ToArrays(), 2 },
             { 1, Array.Empty<int[]>(), 2 },

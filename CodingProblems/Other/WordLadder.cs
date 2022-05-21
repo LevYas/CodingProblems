@@ -22,7 +22,7 @@ public static class WordLadder
 
         var distancesToWordsIds = new List<List<int>>
         {
-            new List<int> { wordArr.Length - 1 }
+            new() { wordArr.Length - 1 }
         };
 
         // instead of deleting we will mark visited words

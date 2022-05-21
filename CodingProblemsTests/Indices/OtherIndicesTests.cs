@@ -49,7 +49,7 @@ public class OtherIndicesTests
     }
 
     public static TheoryData<int[][], int> HourglassSumTestData
-        => new TheoryData<int[][], int>
+        => new()
         {
             {
                 new[]

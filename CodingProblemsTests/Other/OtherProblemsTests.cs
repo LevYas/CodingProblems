@@ -13,7 +13,7 @@ public class OtherProblemsTests
         OtherProblems.FindMinClassroomsAmount(intervals).Should().Be(expected);
     }
 
-    public static TheoryData<(int, int)[], int> FindMinClassroomsAmountTestData => new TheoryData<(int, int)[], int>
+    public static TheoryData<(int, int)[], int> FindMinClassroomsAmountTestData => new()
     {
         { new[] { (30, 75), (0, 50), (60, 150) }, 2 }
     };
