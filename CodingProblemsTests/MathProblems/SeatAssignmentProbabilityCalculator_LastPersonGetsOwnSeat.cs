@@ -7,12 +7,12 @@ namespace CodingProblemsTests.MathProblems;
 public class SeatAssignmentProbabilityCalculator_LastPersonGetsOwnSeat
 {
     [Theory]
-    [InlineData(1)]
-    [InlineData(2)]
-    [InlineData(3)]
-    [InlineData(4)]
-    public void Works(int n)
+    [InlineData(1, 1)]
+    [InlineData(2, 0.5)]
+    [InlineData(3, 0.5)]
+    [InlineData(4, 0.5)]
+    public void Works(int n, double expected)
     {
-        new SeatAssignmentProbabilityCalculator().LastPersonGetsOwnSeat(n).Should().Be(0.5);
+        new SeatAssignmentProbabilityCalculator().LastPersonGetsOwnSeat(n).Should().Be(expected);
     }
 }
