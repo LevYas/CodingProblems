@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace CodingProblems.Indices;
+﻿namespace CodingProblems.Indices;
 
 // 2281. Sum of Total Strength of Wizards
 // As the ruler of a kingdom, you have an army of wizards at your command.

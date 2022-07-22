@@ -1,7 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-
-namespace CodingProblems.Indices;
+﻿namespace CodingProblems.Indices;
 
 // 417. Pacific Atlantic Water Flow
 // There is an m x n rectangular island that borders both the Pacific Ocean and Atlantic Ocean.

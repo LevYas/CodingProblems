@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace CodingProblems.Other;
+﻿namespace CodingProblems.Other;
 
 // 355. Design Twitter
 // Design a simplified version of Twitter where users can post tweets, follow/unfollow another user,

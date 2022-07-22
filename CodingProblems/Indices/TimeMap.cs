@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace CodingProblems.Indices;
+﻿namespace CodingProblems.Indices;
 
 // 981. Time Based Key-Value Store
 // Design a time-based key-value data structure that can store multiple values for the same key at different time stamps

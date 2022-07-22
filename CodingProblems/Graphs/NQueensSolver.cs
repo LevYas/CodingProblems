@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace CodingProblems.Graphs;
+﻿namespace CodingProblems.Graphs;
 
 public static class NQueensSolver
 {

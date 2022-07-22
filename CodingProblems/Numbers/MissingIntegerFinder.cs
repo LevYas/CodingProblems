@@ -1,7 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-
-namespace CodingProblems.Numbers;
+﻿namespace CodingProblems.Numbers;
 
 // MissingInteger
 // Write a function that, given an array A of N integers,

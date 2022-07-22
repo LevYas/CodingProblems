@@ -1,7 +1,4 @@
-﻿using System;
-using System.Linq;
-
-namespace CodingProblems.Indices;
+﻿namespace CodingProblems.Indices;
 
 // 2134. Minimum Swaps to Group All 1's Together II
 // A swap is defined as taking two distinct positions in an array and swapping the values in them.

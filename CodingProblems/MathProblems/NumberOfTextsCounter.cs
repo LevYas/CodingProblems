@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace CodingProblems.MathProblems;
+﻿namespace CodingProblems.MathProblems;
 
 // 2266. Count Number of Texts
 // Alice is texting Bob using her phone. The mapping of digits to letters is shown in the figure below.

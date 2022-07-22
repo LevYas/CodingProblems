@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace CodingProblems.Other;
+﻿namespace CodingProblems.Other;
 
 public static class AnagramFinder
 {

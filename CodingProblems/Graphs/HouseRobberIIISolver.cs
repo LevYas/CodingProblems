@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace CodingProblems.Graphs;
+﻿namespace CodingProblems.Graphs;
 
 // The thief has found himself a new place for his thievery again. There is only one entrance to this area, called root.
 

@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace CodingProblems.Utility;
+﻿namespace CodingProblems.Utility;
 
 public static class DebugLinkedListFactory
 {

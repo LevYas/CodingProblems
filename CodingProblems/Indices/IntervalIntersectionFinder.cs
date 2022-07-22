@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace CodingProblems.Indices;
+﻿namespace CodingProblems.Indices;
 
 // 986. Interval List Intersections
 // You are given two lists of closed intervals, firstList and secondList,

@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace CodingProblems.Indices;
+﻿namespace CodingProblems.Indices;
 
 // 2301. Match Substring After Replacement
 // You are given two strings s and sub.

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Globalization;
-using System.Text;
-
-namespace CodingProblems.Utility;
+﻿namespace CodingProblems.Utility;
 
 public abstract class DebugLinkedList
 {

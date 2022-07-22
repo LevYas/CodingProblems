@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-
-namespace CodingProblems;
+﻿namespace CodingProblems;
 
 // String Calculator Kata
 // This is a special kind of tasks, where you don't know what requirement will be the next

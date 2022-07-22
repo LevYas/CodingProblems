@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace CodingProblems.Graphs;
+﻿namespace CodingProblems.Graphs;
 
 // 79. Word Search
 // Given an m x n grid of characters board and a string word, return true if word exists in the grid.

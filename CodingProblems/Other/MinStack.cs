@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-
-namespace CodingProblems.Other;
+﻿namespace CodingProblems.Other;
 
 // 155. Min Stack
 // Design a stack that supports push, pop, top, and retrieving the minimum element in constant time.

@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace CodingProblems.Numbers;
+﻿namespace CodingProblems.Numbers;
 
 public static class BinaryOperations
 {

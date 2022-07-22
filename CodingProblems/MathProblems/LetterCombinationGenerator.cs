@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-
-namespace CodingProblems.MathProblems;
+﻿namespace CodingProblems.MathProblems;
 
 // 17. Letter Combinations of a Phone Number
 // Given a string containing digits from 2-9 inclusive, return all possible letter combinations

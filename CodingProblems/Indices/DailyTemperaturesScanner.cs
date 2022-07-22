@@ -1,7 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-
-namespace CodingProblems.Indices;
+﻿namespace CodingProblems.Indices;
 
 // 739. Daily Temperatures
 // Given an array of integers temperatures represents the daily temperatures,

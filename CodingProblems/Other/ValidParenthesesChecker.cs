@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace CodingProblems.Other;
+﻿namespace CodingProblems.Other;
 
 // Given a string containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
 // An input string is valid if:

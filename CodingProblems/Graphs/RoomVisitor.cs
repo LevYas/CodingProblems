@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace CodingProblems.Graphs;
+﻿namespace CodingProblems.Graphs;
 
 // 841. Keys and Rooms
 // There are n rooms labeled from 0 to n - 1 and all the rooms are locked except for room 0.

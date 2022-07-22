@@ -1,7 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-
-namespace CodingProblems.Graphs;
+﻿namespace CodingProblems.Graphs;
 
 // 331. Verify Preorder Serialization of a Binary Tree
 // One way to serialize a binary tree is to use preorder traversal. When we encounter a non-null node, we record the node's value.

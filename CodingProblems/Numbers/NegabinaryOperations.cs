@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace CodingProblems.Numbers;
+﻿namespace CodingProblems.Numbers;
 
 public static class NegabinaryOperations
 {

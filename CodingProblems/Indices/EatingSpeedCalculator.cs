@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace CodingProblems.Indices;
+﻿namespace CodingProblems.Indices;
 
 // 875. Koko Eating Bananas
 // Koko loves to eat bananas. There are n piles of bananas, the ith pile has piles[i] bananas.

@@ -1,6 +1,4 @@
-﻿using System.Linq;
-
-namespace CodingProblems.Other;
+﻿namespace CodingProblems.Other;
 
 public static class OtherProblems
 {

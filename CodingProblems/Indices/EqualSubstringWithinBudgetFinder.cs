@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace CodingProblems.Indices;
+﻿namespace CodingProblems.Indices;
 
 // 1208. Get Equal Substrings Within Budget
 // You are given two strings s and t of the same length and an integer maxCost.

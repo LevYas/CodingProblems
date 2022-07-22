@@ -1,7 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-
-namespace CodingProblems.Graphs;
+﻿namespace CodingProblems.Graphs;
 
 // 2285. Maximum Total Importance of Roads
 // You are given an integer n denoting the number of cities in a country. The cities are numbered from 0 to n - 1.

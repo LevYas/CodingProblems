@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-
-namespace CodingProblems.Indices;
+﻿namespace CodingProblems.Indices;
 
 public static class TrappedWaterCalculator
 {

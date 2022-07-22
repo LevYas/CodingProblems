@@ -1,7 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-
-namespace CodingProblems.Graphs;
+﻿namespace CodingProblems.Graphs;
 
 // 1971. Find if Path Exists in Graph
 // There is a bi-directional graph with n vertices, where each vertex is labeled from 0 to n - 1 (inclusive).

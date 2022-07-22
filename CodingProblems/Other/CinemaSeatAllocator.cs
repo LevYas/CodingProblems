@@ -1,7 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-
-namespace CodingProblems.Other;
+﻿namespace CodingProblems.Other;
 
 // A cinema has n rows of seats, numbered from 1 to n and there are ten seats in each row, labeled from 1 to 10.
 // Given the array reservedSeats containing the numbers of seats already reserved, for example,
