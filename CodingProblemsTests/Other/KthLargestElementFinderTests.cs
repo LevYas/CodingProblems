@@ -1,6 +1,4 @@
-﻿using CodingProblems.Other;
-using FluentAssertions;
-using Xunit;
+﻿using KthLargestElementFinder = CodingProblems.Other.KthLargestElementFinder;
 
 namespace CodingProblemsTests.Other;
 

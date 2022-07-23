@@ -1,10 +1,3 @@
-using CodingProblems.Other;
-using System;
-using System.Collections.Generic;
-using CodingProblemsTests.Utility;
-using FluentAssertions;
-using Xunit;
-
 namespace CodingProblemsTests.Other;
 
 public class CinemaSeatAllocator_MaxNumberOfFamilies

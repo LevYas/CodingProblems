@@ -1,10 +1,4 @@
-﻿using CodingProblems.Graphs;
-using CodingProblemsTests.Utility;
-using System;
-using FluentAssertions;
-using Xunit;
-
-namespace CodingProblemsTests.Graphs;
+﻿namespace CodingProblemsTests.Graphs;
 
 public class BipartitionsFinder_IsGraphBipartite
 {

@@ -1,8 +1,4 @@
-﻿using CodingProblems.MathProblems;
-using FluentAssertions;
-using Xunit;
-
-namespace CodingProblemsTests.MathProblems;
+﻿namespace CodingProblemsTests.MathProblems;
 
 public class SeatAssignmentProbabilityCalculator_LastPersonGetsOwnSeat
 {

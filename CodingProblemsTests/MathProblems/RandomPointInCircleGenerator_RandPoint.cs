@@ -1,8 +1,4 @@
-﻿using CodingProblems.MathProblems;
-using FluentAssertions;
-using System;
-using System.Numerics;
-using Xunit;
+﻿using System.Numerics;
 
 namespace CodingProblemsTests.MathProblems;
 

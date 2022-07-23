@@ -1,9 +1,4 @@
-﻿using CodingProblems.Indices;
-using FluentAssertions;
-using System;
-using Xunit;
-
-namespace CodingProblemsTests.Indices;
+﻿namespace CodingProblemsTests.Indices;
 
 public class LargestPlusFinder_OrderOfLargestPlusSign
 {

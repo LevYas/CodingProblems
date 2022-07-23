@@ -1,7 +1,4 @@
-﻿using FluentAssertions;
-using Xunit;
-
-namespace CodingProblemsTests.Indices;
+﻿namespace CodingProblemsTests.Indices;
 
 public class LengthOfLastWordFinder_FindLength
 {

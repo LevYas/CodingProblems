@@ -1,7 +1,5 @@
-﻿using CodingProblems.Sorting;
-using FluentAssertions;
-using FluentAssertions.Execution;
-using Xunit;
+﻿using FluentAssertions.Execution;
+using KthLargestElementFinder = CodingProblems.Sorting.KthLargestElementFinder;
 
 namespace CodingProblemsTests.Sorting;
 

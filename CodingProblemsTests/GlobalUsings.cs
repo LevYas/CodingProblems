@@ -1,0 +1,16 @@
+global using FluentAssertions;
+global using Xunit;
+global using CodingProblems.Graphs;
+global using CodingProblems.Indices;
+global using CodingProblems.Lists;
+global using CodingProblems.Utility;
+global using CodingProblems.MathProblems;
+global using CodingProblems.Numbers;
+global using CodingProblems.Sorting;
+global using CodingProblems.Other;
+global using CodingProblemsTests.Utility;
+global using System;
+global using System.Linq;
+global using System.Collections.Generic;
+global using System.Globalization;
+global using System.Text;

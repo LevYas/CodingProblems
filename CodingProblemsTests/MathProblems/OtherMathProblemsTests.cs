@@ -1,11 +1,4 @@
-﻿using CodingProblems.MathProblems;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using FluentAssertions;
-using Xunit;
-
-namespace CodingProblemsTests.MathProblems;
+﻿namespace CodingProblemsTests.MathProblems;
 
 public class OtherMathProblemsTests
 {

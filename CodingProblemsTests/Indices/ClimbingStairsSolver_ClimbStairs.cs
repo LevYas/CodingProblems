@@ -1,7 +1,3 @@
-using CodingProblems.Indices;
-using FluentAssertions;
-using Xunit;
-
 namespace CodingProblemsTests.Indices;
 
 public class ClimbingStairsSolver_ClimbStairs

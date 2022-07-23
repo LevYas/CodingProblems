@@ -1,9 +1,4 @@
-﻿using CodingProblems.Lists;
-using FluentAssertions;
-using CodingProblems.Utility;
-using Xunit;
-
-namespace CodingProblemsTests.Lists;
+﻿namespace CodingProblemsTests.Lists;
 
 public class PalindromeListChecker_IsPalindrome
 {

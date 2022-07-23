@@ -1,9 +1,4 @@
-﻿using CodingProblems.Graphs;
-using System.Collections.Generic;
-using FluentAssertions;
-using Xunit;
-
-namespace CodingProblemsTests.Graphs;
+﻿namespace CodingProblemsTests.Graphs;
 
 public class NQueensSolver_SolveNQueens
 {

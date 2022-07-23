@@ -1,9 +1,4 @@
-﻿using CodingProblems.Other;
-using FluentAssertions;
-using System.Collections.Generic;
-using Xunit;
-
-namespace CodingProblemsTests.Other;
+﻿namespace CodingProblemsTests.Other;
 
 public class Twitter_GetNewsFeed
 {

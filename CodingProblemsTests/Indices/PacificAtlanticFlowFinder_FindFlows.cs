@@ -1,9 +1,4 @@
-﻿using CodingProblems.Indices;
-using FluentAssertions;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using Xunit;
+﻿using System.Collections;
 
 namespace CodingProblemsTests.Indices;
 

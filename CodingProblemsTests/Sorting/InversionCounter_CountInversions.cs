@@ -1,8 +1,4 @@
-﻿using CodingProblems.Sorting;
-using FluentAssertions;
-using Xunit;
-
-namespace CodingProblemsTests.Sorting;
+﻿namespace CodingProblemsTests.Sorting;
 
 public class InversionCounter_CountInversions
 {

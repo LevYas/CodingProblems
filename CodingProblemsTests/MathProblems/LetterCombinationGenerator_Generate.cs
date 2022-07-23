@@ -1,9 +1,4 @@
-﻿using CodingProblems.MathProblems;
-using FluentAssertions;
-using System.Collections.Generic;
-using Xunit;
-
-namespace CodingProblemsTests.MathProblems;
+﻿namespace CodingProblemsTests.MathProblems;
 
 public class LetterCombinationGenerator_Generate
 {

@@ -1,9 +1,4 @@
-﻿using System.Collections.Generic;
-using CodingProblems.Other;
-using FluentAssertions;
-using Xunit;
-
-namespace CodingProblemsTests.Other;
+﻿namespace CodingProblemsTests.Other;
 
 public class AnagramFinder_FindAnagrams
 {

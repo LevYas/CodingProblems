@@ -1,10 +1,4 @@
-﻿using System.Collections.Generic;
-using Xunit;
-using CodingProblemsTests.Utility;
-using FluentAssertions;
-using CodingProblems.Graphs;
-
-namespace CodingProblemsTests.Graphs;
+﻿namespace CodingProblemsTests.Graphs;
 
 public class CriticalConnectionFinder_Find
 {

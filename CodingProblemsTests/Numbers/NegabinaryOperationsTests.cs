@@ -1,8 +1,4 @@
-﻿using CodingProblems.Numbers;
-using FluentAssertions;
-using Xunit;
-
-namespace CodingProblemsTests.Numbers;
+﻿namespace CodingProblemsTests.Numbers;
 
 public class NegabinaryOperationsTests
 {

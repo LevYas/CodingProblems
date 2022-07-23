@@ -1,7 +1,4 @@
-﻿using CodingProblems.Indices;
-using Xunit;
-
-namespace CodingProblemsTests.Indices;
+﻿namespace CodingProblemsTests.Indices;
 
 public class TrappedWaterCalculator_CalcTrappedWaterAmount
 {

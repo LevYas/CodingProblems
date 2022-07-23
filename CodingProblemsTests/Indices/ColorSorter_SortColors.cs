@@ -1,8 +1,4 @@
-﻿using CodingProblems.Indices;
-using FluentAssertions;
-using Xunit;
-
-namespace CodingProblemsTests.Indices;
+﻿namespace CodingProblemsTests.Indices;
 
 public class ColorSorter_SortColors
 {

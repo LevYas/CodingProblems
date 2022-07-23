@@ -1,8 +1,4 @@
-﻿using CodingProblems.Other;
-using FluentAssertions;
-using Xunit;
-
-namespace CodingProblemsTests.Other;
+﻿namespace CodingProblemsTests.Other;
 
 public class SquaresOfASortedArray_SolveSortedSquares
 {
