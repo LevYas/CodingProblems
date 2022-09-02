@@ -14,7 +14,7 @@ public class PalindromeListChecker_IsPalindrome
     [InlineData(new[] { 1, 2, 3, 4, 3, 2, 2 }, false)]
     public void Works(int[] sourceArr, bool expected)
     {
-        var list = DebugLinkedListFactory.Create<PalindromeListChecker.ListNode>(sourceArr);
+        var list = DebugLinkedListFactory.Create<ListNode>(sourceArr);
 
         bool result = new PalindromeListChecker().IsPalindrome(list);
 

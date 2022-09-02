@@ -1,19 +1,4 @@
-﻿using CodingProblems.Utility;
-
-namespace CodingProblems.Lists;
-
-public class ListNode : DebugLinkedList
-{
-    public ListNode(int x) : base(x) { }
-
-    public ListNode Next
-    {
-        get => NextNode as ListNode;
-        set => NextNode = value;
-    }
-
-    public int Val => Value;
-}
+﻿namespace CodingProblems.Lists;
 
 // Reverse a linked list from position m to n. Do it in one-pass.
 // Note: 1 ≤ m ≤ n ≤ length of list.

@@ -1,6 +1,4 @@
-﻿using CodingProblems.Utility;
-
-namespace CodingProblems.Lists;
+﻿namespace CodingProblems.Lists;
 
 // 234. Palindrome Linked List
 // Given the head of a singly linked list, return true if it is a palindrome.
@@ -8,24 +6,6 @@ namespace CodingProblems.Lists;
 
 public class PalindromeListChecker
 {
-    public class ListNode : DebugLinkedList
-    {
-        public ListNode(int val = 0) : base(val) { }
-
-        public ListNode(int val = 0, ListNode next = null) : base(val)
-        {
-            NextNode = next;
-        }
-
-        public ListNode Next
-        {
-            get => NextNode as ListNode;
-            set => NextNode = value;
-        }
-
-        public int Val => Value;
-    }
-
     public bool IsPalindrome(ListNode head)
     {
         if (head.Next == null) // one element only, it's a palindrome
