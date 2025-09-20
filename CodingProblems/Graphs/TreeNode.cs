@@ -11,4 +11,6 @@ public class TreeNode
         Left = left;
         Right = right;
     }
+
+    public override string ToString() => $"{Val} ({(Left?.Val == null ? "null" : Left.Val)}, {(Right?.Val == null ? "null" : Right.Val)})";
 }
