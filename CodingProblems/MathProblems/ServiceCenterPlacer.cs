@@ -1,4 +1,4 @@
-﻿namespace CodingProblems.MathProblems;
+namespace CodingProblems.MathProblems;
 
 // 1515. Best Position for a Service Centre
 // A delivery company wants to build a new service center in a new city.

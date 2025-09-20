@@ -1,4 +1,4 @@
-﻿namespace CodingProblems.Indices;
+namespace CodingProblems.Indices;
 
 // 2222. Number of Ways to Select Buildings
 

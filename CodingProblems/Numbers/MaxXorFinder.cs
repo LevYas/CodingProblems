@@ -1,4 +1,4 @@
-﻿namespace CodingProblems.Numbers;
+namespace CodingProblems.Numbers;
 
 // 421. Maximum XOR of Two Numbers in an Array
 // Given an integer array nums, return the maximum result of nums[i] XOR nums[j], where 0 <= i <= j < n.
@@ -27,7 +27,7 @@ public class MaxXorFinder
                 current = current.Children[currentBit];
             }
         }
-        
+
         int max = 0;
 
         foreach (int num in nums)

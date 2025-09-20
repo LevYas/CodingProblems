@@ -1,4 +1,4 @@
-﻿namespace CodingProblems.Indices;
+namespace CodingProblems.Indices;
 
 // 2301. Match Substring After Replacement
 // You are given two strings s and sub.
@@ -15,36 +15,36 @@ public class ReplacedStringMatcher
     public bool MatchReplacement(string s, string sub, char[][] mappings)
     {
         Dictionary<char, HashSet<char>> mappingIdx = new();
-        
-        foreach(char[] map in mappings)
+
+        foreach (char[] map in mappings)
         {
             mappingIdx.TryAdd(map[0], new HashSet<char>());
             mappingIdx[map[0]].Add(map[1]);
         }
-        
+
         bool tryMatch(int i)
         {
             for (int isub = 0; isub < sub.Length; isub++)
             {
                 if (sub[isub] == s[i + isub])
                     continue;
-                
+
                 if (!mappingIdx.ContainsKey(sub[isub]))
                     return false;
-                
+
                 if (!mappingIdx[sub[isub]].Contains(s[i + isub]))
                     return false;
             }
-            
+
             return true;
         }
-            
-        for(int i = 0; i <= s.Length - sub.Length; i++)
+
+        for (int i = 0; i <= s.Length - sub.Length; i++)
         {
             if (tryMatch(i))
                 return true;
         }
-        
+
         return false;
     }
 }

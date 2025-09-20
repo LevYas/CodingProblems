@@ -1,4 +1,4 @@
-﻿namespace CodingProblems.Graphs;
+namespace CodingProblems.Graphs;
 
 // 1948. Delete Duplicate Folders in System
 // Due to a bug, there are many duplicate folders in a file system. You are given a 2D array paths,
@@ -57,7 +57,7 @@ public class DuplicatedFolderCleaner
 
         return survived.Cast<IList<string>>().ToList();
     }
-    
+
     private static void addFolder(Node root, IList<string> hierarchy)
     {
         Node current = root;
@@ -68,7 +68,7 @@ public class DuplicatedFolderCleaner
             current = current.Children[folder];
         }
     }
-    
+
     private string markDuplicates(Node node)
     {
         string result = "";

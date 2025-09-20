@@ -1,4 +1,4 @@
-﻿namespace CodingProblems.Indices;
+namespace CodingProblems.Indices;
 
 // 611. Valid Triangle Number
 // Given an integer array nums,
@@ -10,12 +10,12 @@ public class ValidTriangleNumberFinder
     public int Find(int[] nums)
     {
         Array.Sort(nums);
-        
+
         int result = 0;
-        
+
         if (nums.Length < 3)
             return 0;
-        
+
         for (int i = 0; i < nums.Length - 2; i++)
         {
             if (nums[i] == 0)
@@ -26,7 +26,7 @@ public class ValidTriangleNumberFinder
             for (int j = i + 1; j < nums.Length - 1; j++)
             {
                 int currentSum = nums[i] + nums[j];
-                
+
                 // sum must be qreater than third length
                 // so the third length must be smaller
 
@@ -44,7 +44,7 @@ public class ValidTriangleNumberFinder
                 result += idxToStart - j - 1;
             }
         }
-        
+
         return result;
     }
 }

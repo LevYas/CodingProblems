@@ -1,4 +1,4 @@
-﻿namespace CodingProblems.MathProblems;
+namespace CodingProblems.MathProblems;
 
 public static class OtherMathProblems
 {

@@ -1,4 +1,4 @@
-﻿namespace CodingProblemsTests.Graphs;
+namespace CodingProblemsTests.Graphs;
 
 public class WordFinder_Exist
 {

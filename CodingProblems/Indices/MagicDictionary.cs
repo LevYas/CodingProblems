@@ -1,4 +1,4 @@
-﻿namespace CodingProblems.Indices;
+namespace CodingProblems.Indices;
 
 // 676. Implement Magic Dictionary
 // Design a data structure that is initialized with a list of different words.

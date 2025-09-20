@@ -1,4 +1,4 @@
-﻿namespace CodingProblems.Other;
+namespace CodingProblems.Other;
 
 // 355. Design Twitter
 // Design a simplified version of Twitter where users can post tweets, follow/unfollow another user,
@@ -26,7 +26,7 @@ public class Twitter
 
     private readonly Dictionary<int, HashSet<int>> _followerToFollowees = new();
     private readonly Dictionary<int, Tweet> _userToTweets = new();
-    
+
     public void PostTweet(int userId, int tweetId)
     {
         Tweet newTweet = new(tweetId, _rank--);

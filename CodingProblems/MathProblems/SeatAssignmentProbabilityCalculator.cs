@@ -1,4 +1,4 @@
-﻿namespace CodingProblems.MathProblems;
+namespace CodingProblems.MathProblems;
 
 // 1227. Airplane Seat Assignment Probability
 // n passengers board an airplane with exactly n seats.

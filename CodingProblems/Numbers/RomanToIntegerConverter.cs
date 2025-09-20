@@ -1,4 +1,4 @@
-﻿namespace CodingProblems.Numbers;
+namespace CodingProblems.Numbers;
 
 public static class RomanToIntegerConverter
 {
@@ -10,7 +10,7 @@ public static class RomanToIntegerConverter
         int result = 0;
         int prevVal = -1;
 
-        for (int i = s.Length - 1; i >= 0 ; i--)
+        for (int i = s.Length - 1; i >= 0; i--)
         {
             int curVal = getSymbolValue(s[i]);
 

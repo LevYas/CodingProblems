@@ -1,4 +1,4 @@
-﻿using CodingProblems.Utility;
+using CodingProblems.Utility;
 
 namespace CodingProblems.Lists;
 

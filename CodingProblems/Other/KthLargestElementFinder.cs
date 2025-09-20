@@ -1,4 +1,4 @@
-﻿namespace CodingProblems.Other;
+namespace CodingProblems.Other;
 
 // Design a class to find the kth largest element in a stream.
 // Note that it is the kth largest element in the sorted order, not the kth distinct element.
@@ -17,7 +17,7 @@ public class KthLargestElementFinder
         foreach (int num in nums)
             add((short)num);
     }
-    
+
     public int Add(int val)
     {
         add((short)val);

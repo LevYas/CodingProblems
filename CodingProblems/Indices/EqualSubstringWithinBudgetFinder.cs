@@ -1,4 +1,4 @@
-﻿namespace CodingProblems.Indices;
+namespace CodingProblems.Indices;
 
 // 1208. Get Equal Substrings Within Budget
 // You are given two strings s and t of the same length and an integer maxCost.
@@ -14,11 +14,11 @@ public class EqualSubstringWithinBudgetFinder
     public int GetEqualSubstringsWithinBudget(string s, string t, int maxCost)
     {
         int maxLength = 0;
-        
+
         int start = 0;
         int end = 0;
         int currentCost = Math.Abs(s[end] - t[end]);
-        
+
         while (start < s.Length && end < s.Length)
         {
             if (currentCost <= maxCost)
@@ -38,7 +38,7 @@ public class EqualSubstringWithinBudgetFinder
                 start++;
             }
         }
-        
+
         return maxLength;
     }
 }

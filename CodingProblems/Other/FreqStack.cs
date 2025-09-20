@@ -1,4 +1,4 @@
-﻿namespace CodingProblems.Other;
+namespace CodingProblems.Other;
 
 // 895. Maximum Frequency Stack
 // Design a stack-like data structure to push elements to the stack and pop the most frequent element from the stack.
@@ -23,28 +23,28 @@ public class FreqStack
     private readonly Dictionary<int, int> _valueToFrequency = new();
     private readonly Dictionary<int, Stack<int>> _frequencyToValues = new();
     private int _maxFrequency;
-    
+
     public void Push(int val)
     {
         if (!_valueToFrequency.TryAdd(val, 1))
             _valueToFrequency[val]++;
-        
+
         int newFrequency = _valueToFrequency[val];
         _maxFrequency = Math.Max(newFrequency, _maxFrequency);
 
         _frequencyToValues.TryAdd(newFrequency, new Stack<int>());
         _frequencyToValues[newFrequency].Push(val);
     }
-    
+
     public int Pop()
     {
         int val = _frequencyToValues[_maxFrequency].Pop();
-        
+
         _valueToFrequency[val]--;
 
         if (!_frequencyToValues[_maxFrequency].Any())
             _maxFrequency--;
-        
+
         return val;
     }
 }

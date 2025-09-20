@@ -1,4 +1,4 @@
-﻿namespace CodingProblems.Indices;
+namespace CodingProblems.Indices;
 
 // 1024. Video Stitching
 // You are given a series of video clips from a sporting event that lasted time seconds.

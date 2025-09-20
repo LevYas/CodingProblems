@@ -1,4 +1,4 @@
-﻿namespace CodingProblems.Other;
+namespace CodingProblems.Other;
 
 // 155. Min Stack
 // Design a stack that supports push, pop, top, and retrieving the minimum element in constant time.
@@ -15,19 +15,19 @@ public class MinStack
 {
     private readonly Stack<int> _stack = new();
     private readonly Stack<int> _minimums = new();
-    
+
     public void Push(int val)
     {
         _stack.Push(val);
         _minimums.Push(_minimums.Any() ? Math.Min(_minimums.Peek(), val) : val);
     }
-    
+
     public void Pop()
     {
         _stack.Pop();
         _minimums.Pop();
     }
-    
+
     public int Top() => _stack.Peek();
 
     public int GetMin() => _minimums.Peek();

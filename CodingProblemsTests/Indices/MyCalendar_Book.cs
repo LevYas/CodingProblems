@@ -1,4 +1,4 @@
-﻿namespace CodingProblemsTests.Indices;
+namespace CodingProblemsTests.Indices;
 
 public class MyCalendar_Book
 {

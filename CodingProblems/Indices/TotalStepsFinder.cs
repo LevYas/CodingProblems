@@ -1,4 +1,4 @@
-﻿namespace CodingProblems.Indices;
+namespace CodingProblems.Indices;
 
 // 2289. Steps to Make Array Non-decreasing
 // You are given a 0-indexed integer array nums.
@@ -35,7 +35,7 @@ public class TotalStepsFinder
             decreasingItemsIds.Push((i, currentSteps));
             maxSteps = Math.Max(maxSteps, currentSteps);
         }
-        
+
         return maxSteps;
     }
 }

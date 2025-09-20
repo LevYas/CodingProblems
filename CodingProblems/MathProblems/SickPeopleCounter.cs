@@ -1,4 +1,4 @@
-﻿namespace CodingProblems.MathProblems;
+namespace CodingProblems.MathProblems;
 
 // 2327. Number of People Aware of a Secret
 // On day 1, one person discovers a secret.

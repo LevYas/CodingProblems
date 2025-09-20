@@ -1,4 +1,4 @@
-﻿namespace CodingProblems.Other;
+namespace CodingProblems.Other;
 
 // 432. All O`one Data Structure
 // Design a data structure to store the strings' count with the ability to return the strings with minimum and maximum counts.
@@ -27,7 +27,7 @@ public class AllOne
             Value = val;
             Key = key;
         }
-        
+
         public int Value;
         public string Key;
         public Node Greater;
@@ -35,19 +35,19 @@ public class AllOne
 
         public override string ToString() => $"{Value} - {Key}";
     }
-    
+
     private readonly Dictionary<string, Node> _keysToNodes = new();
-    
+
     private Node _greatest;
     private Node _smallest;
-    
+
     public void Inc(string key)
     {
         bool isNew = _keysToNodes.TryAdd(key, new Node(key, 0));
-        
+
         Node node = _keysToNodes[key];
         node.Value++;
-        
+
         if (isNew)
         {
             node.Greater = _smallest;
@@ -61,13 +61,13 @@ public class AllOne
             while (node.Greater != null && node.Value > node.Greater.Value)
                 swap(node, node.Greater);
         }
-        
+
         if (node.Greater == null)
             _greatest = node;
         else
             node.Greater.Smaller = node;
     }
-    
+
     private void swap(Node node1, Node node2)
     {
         Node leftBound = node1.Smaller;
@@ -89,12 +89,12 @@ public class AllOne
         else
             _greatest = node1;
     }
-    
+
     public void Dec(string key)
     {
         Node node = _keysToNodes[key];
         node.Value--;
-        
+
         if (node.Value == 0)
         {
             _keysToNodes.Remove(key);
@@ -118,7 +118,7 @@ public class AllOne
         while (node.Smaller != null && node.Value < node.Smaller.Value)
             swap(node.Smaller, node);
     }
-    
+
     public string GetMaxKey() => _greatest?.Key ?? "";
     public string GetMinKey() => _smallest?.Key ?? "";
 }

@@ -1,4 +1,4 @@
-﻿namespace CodingProblems.Other;
+namespace CodingProblems.Other;
 
 // 2013. Detect Squares
 // You are given a stream of points on the X-Y plane. Design an algorithm that:
@@ -19,16 +19,16 @@ public class SquaresDetector
 {
     private readonly Dictionary<(int x, int y), int> _counts = new();
     private readonly Dictionary<int, HashSet<(int x, int y)>> _xIdx = new();
-    
+
     public void Add(int[] point)
     {
         _xIdx.TryAdd(point[0], new());
         _xIdx[point[0]].Add((point[0], point[1]));
-        
+
         _counts.TryAdd((point[0], point[1]), 0);
         _counts[(point[0], point[1])]++;
     }
-    
+
     public int Count(int[] point)
     {
         if (!_xIdx.TryGetValue(point[0], out var xMatch))

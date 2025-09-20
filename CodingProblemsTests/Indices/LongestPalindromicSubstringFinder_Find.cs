@@ -1,4 +1,4 @@
-﻿namespace CodingProblemsTests.Indices;
+namespace CodingProblemsTests.Indices;
 
 public class LongestPalindromicSubstringFinder_Find
 {
@@ -6,7 +6,7 @@ public class LongestPalindromicSubstringFinder_Find
     [InlineData("a", "a")]
     [InlineData("aa", "aa")]
     [InlineData("ab", "a")]
-    [InlineData("babad", "bab")] 
+    [InlineData("babad", "bab")]
     [InlineData("cbbd", "bb")]
     [InlineData("bdaa", "aa")]
     [InlineData("aaaa", "aaaa")]

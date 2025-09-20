@@ -1,4 +1,4 @@
-﻿namespace CodingProblems.Indices;
+namespace CodingProblems.Indices;
 
 // 875. Koko Eating Bananas
 // Koko loves to eat bananas. There are n piles of bananas, the ith pile has piles[i] bananas.
@@ -19,32 +19,32 @@ public class EatingSpeedCalculator
     {
         // Initially I tried to find min and max boundaries, but we can just get them from the constraints
         // Then use binary search to find minimum speed
-        
+
         int lo = 1;
         int hi = 1000000000;
-        
+
         while (lo < hi)
         {
             int middle = (lo + hi) / 2;
-            
+
             if (canEatAll(piles, middle, h))
                 hi = middle;
             else
                 lo = middle + 1;
         }
-        
+
         return lo;
     }
-    
+
     private static bool canEatAll(int[] piles, int speed, int hoursLeft)
-    {  
-        foreach(int pile in piles)
+    {
+        foreach (int pile in piles)
         {
             hoursLeft -= (int)Math.Ceiling((double)pile / speed);
             if (hoursLeft < 0)
                 return false;
         }
-        
+
         return true;
     }
 }

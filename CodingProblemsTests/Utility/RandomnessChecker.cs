@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 
 namespace CodingProblemsTests.Utility;
 
@@ -16,7 +16,7 @@ internal static class RandomnessChecker
         int n = randomNums.Length;
 
         //According to Sedgewick: "This is valid if N is greater than about 10r"
-        if (n <= 10*r)
+        if (n <= 10 * r)
             return false;
 
         double nR = n / r;
@@ -24,7 +24,7 @@ internal static class RandomnessChecker
         Hashtable ht;
 
         //PART A: Get frequency of randoms
-        ht = randomFrequency (randomNums);
+        ht = randomFrequency(randomNums);
 
         //PART B: Calculate chi-square - this approach is in Sedgewick
         foreach (DictionaryEntry item in ht)
@@ -36,7 +36,7 @@ internal static class RandomnessChecker
 
         //PART C: According to Swdgewick: "The statistic should be within 2(r)^1/2 of r
         //This is valid if N is greater than about 10r"
-        if((r - 2 * Math.Sqrt (r) <= chiSquare) &  (r + 2 * Math.Sqrt (r) >= chiSquare))
+        if ((r - 2 * Math.Sqrt(r) <= chiSquare) & (r + 2 * Math.Sqrt(r) >= chiSquare))
             return true;
         else
             return false;
@@ -49,14 +49,14 @@ internal static class RandomnessChecker
         Hashtable ht = new Hashtable();
         int n = randomNums.Length;
 
-        for(int i = 0; i <= n-1; i++)
+        for (int i = 0; i <= n - 1; i++)
         {
             if (ht.ContainsKey(randomNums[i]))
-                ht[randomNums[i]] = (int) ht[randomNums[i]] + 1;
+                ht[randomNums[i]] = (int)ht[randomNums[i]] + 1;
             else
                 ht[randomNums[i]] = 1;
         }
-	
+
         return ht;
     }
 }

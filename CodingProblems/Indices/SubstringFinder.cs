@@ -1,4 +1,4 @@
-﻿namespace CodingProblems.Indices;
+namespace CodingProblems.Indices;
 
 // 28. Implement strStr()
 // Implement strStr().
@@ -16,25 +16,25 @@ public class SubstringFinder
     {
         if (String.IsNullOrEmpty(needle))
             return 0;
-        
-        for(int i = 0; i <= haystack.Length - needle.Length; i++)
+
+        for (int i = 0; i <= haystack.Length - needle.Length; i++)
         {
             if (haystack[i] != needle[0])
                 continue;
-            
+
             int j = 1;
-            
-            for(; j < needle.Length; j++)
+
+            for (; j < needle.Length; j++)
             {
                 if (haystack[i + j] != needle[j])
                     break;
             }
-            
+
             if (j == needle.Length)
                 return i;
-            
+
         }
-        
+
         return -1;
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace CodingProblems.Utility;
+namespace CodingProblems.Utility;
 
 public abstract class DebugLinkedList
 {
@@ -8,7 +8,7 @@ public abstract class DebugLinkedList
     protected int Value { get; set; }
     public int Index { get; set; } = 0;
 
-    public TList ForAll<TList>(Action<TList> action) where TList: DebugLinkedList
+    public TList ForAll<TList>(Action<TList> action) where TList : DebugLinkedList
     {
         TList current = (TList)this;
 

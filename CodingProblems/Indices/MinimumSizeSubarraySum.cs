@@ -1,4 +1,4 @@
-﻿namespace CodingProblems.Indices;
+namespace CodingProblems.Indices;
 
 // 209. Minimum Size Subarray Sum
 // Given an array of positive integers nums and a positive integer target, return the minimal length of a contiguous subarray

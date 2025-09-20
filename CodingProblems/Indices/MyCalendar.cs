@@ -1,4 +1,4 @@
-﻿namespace CodingProblems.Indices;
+namespace CodingProblems.Indices;
 
 // 729. My Calendar I
 // You are implementing a program to use as your calendar. We can add a new event if adding the event will not cause a double booking.
@@ -14,7 +14,7 @@
 public class MyCalendar
 {
     private readonly List<(int start, int end)> _appointments = new();
-    
+
     public bool Book(int start, int end)
     {
         int idxForNew = search(start);

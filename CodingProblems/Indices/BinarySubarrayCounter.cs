@@ -1,4 +1,4 @@
-﻿namespace CodingProblems.Indices;
+namespace CodingProblems.Indices;
 
 // 930. Binary Subarrays With Sum
 // Given a binary array nums and an integer goal, return the number of non-empty subarrays with a sum goal.
@@ -18,7 +18,7 @@ public class BinarySubarrayCounter
 
         // How many times we've seen a prefix sum. Max prefix sum == nums.Length, we need to be able to accomodate that
         int[] prefixSumCounts = new int[nums.Length + 1];
-        
+
         foreach (int num in nums)
         {
             prefixSum += num;

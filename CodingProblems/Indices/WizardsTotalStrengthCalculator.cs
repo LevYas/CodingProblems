@@ -1,4 +1,4 @@
-﻿namespace CodingProblems.Indices;
+namespace CodingProblems.Indices;
 
 // 2281. Sum of Total Strength of Wizards
 // As the ruler of a kingdom, you have an army of wizards at your command.
@@ -18,38 +18,38 @@ public class WizardsTotalStrengthCalculator
     public int CalcTotalStrength(int[] strength)
     {
         int[] prefixSums = new int[strength.Length];
-        
+
         prefixSums[0] = strength[0];
-        
+
         for (int i = 1; i < strength.Length; i++)
             prefixSums[i] = prefixSums[i - 1] + strength[i];
-        
+
         // example:  1, 3, 1, 2
         // pref sum: 1  4  5  7
         // sum of range [i, k] - pref[k] - pref[i - 1]
-            
+
         int result = 0;
-        
+
         int spanLength = 1;
         while (spanLength <= strength.Length)
         {
-            for(int i = 0; i <= strength.Length - spanLength; i++)
+            for (int i = 0; i <= strength.Length - spanLength; i++)
             {
                 int spanMin = Int32.MaxValue;
-                
+
                 for (int j = 0; j < spanLength; j++)
                     spanMin = Math.Min(spanMin, strength[i + j]);
-                
+
                 int prefixSumBeforeSpan = i > 0 ? prefixSums[i - 1] : 0;
                 int sumOfSpan = prefixSums[i + spanLength - 1] - prefixSumBeforeSpan;
-                
+
                 result += spanMin * sumOfSpan;
                 result %= 1000000007;
             }
-            
+
             spanLength++;
         }
-        
+
         return result;
     }
 }

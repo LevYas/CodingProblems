@@ -1,4 +1,4 @@
-﻿namespace CodingProblems;
+namespace CodingProblems;
 
 public static class HeapPrinter
 {

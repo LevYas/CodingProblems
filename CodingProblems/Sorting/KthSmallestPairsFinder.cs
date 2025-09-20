@@ -1,4 +1,4 @@
-﻿namespace CodingProblems.Sorting;
+namespace CodingProblems.Sorting;
 
 // 373. Find K Pairs with Smallest Sums
 // You are given two integer arrays nums1 and nums2 sorted in ascending order and an integer k.
@@ -29,9 +29,9 @@ public class KthSmallestPairsFinder
             result.Add(new List<int>() { nums1[i1], nums2[i2] });
 
             (int i1, int i2) n = (i1 + 1, i2);
-            if (n.i1 < nums1.Length )
+            if (n.i1 < nums1.Length)
                 enqueueIfNotUsed(n);
-            
+
             n = (i1, i2 + 1);
             if (n.i2 < nums2.Length)
                 enqueueIfNotUsed(n);

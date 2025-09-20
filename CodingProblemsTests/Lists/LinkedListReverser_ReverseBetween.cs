@@ -1,4 +1,4 @@
-﻿namespace CodingProblemsTests.Lists;
+namespace CodingProblemsTests.Lists;
 
 public class LinkedListReverser_ReverseBetween
 {

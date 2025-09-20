@@ -1,4 +1,4 @@
-﻿namespace CodingProblems.Indices;
+namespace CodingProblems.Indices;
 
 // 981. Time Based Key-Value Store
 // Design a time-based key-value data structure that can store multiple values for the same key at different time stamps
@@ -14,18 +14,18 @@
 public class TimeMap
 {
     private readonly Dictionary<string, List<(int, string)>> _keysToTimedValues = new();
-    
+
     public void Set(string key, string value, int timestamp)
     {
         _keysToTimedValues.TryAdd(key, new List<(int, string)>());
         _keysToTimedValues[key].Add((timestamp, value));
     }
-    
+
     public string Get(string key, int timestamp)
     {
         if (!_keysToTimedValues.ContainsKey(key))
             return "";
-        
+
         List<(int timestamp, string value)> timesWithValues = _keysToTimedValues[key];
 
         if (timesWithValues[^1].timestamp <= timestamp)

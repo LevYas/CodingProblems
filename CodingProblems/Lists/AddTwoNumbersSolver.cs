@@ -1,4 +1,4 @@
-﻿namespace CodingProblems.Lists;
+namespace CodingProblems.Lists;
 
 // 2. Add Two Numbers
 // You are given two non-empty linked lists representing two non-negative integers.
@@ -13,16 +13,16 @@ public class AddTwoNumbersSolver
     {
         ListNode result = null;
         ListNode currentFromResult = null;
-        
+
         ListNode current1 = l1;
         ListNode current2 = l2;
-        
+
         int carry = 0;
-        while(current1 != null || current2 != null)
+        while (current1 != null || current2 != null)
         {
             int sum = (current1?.Val ?? 0) + (current2?.Val ?? 0) + carry;
             carry = sum / 10;
-          
+
             if (currentFromResult == null)
             {
                 result = new(sum % 10);
@@ -37,10 +37,10 @@ public class AddTwoNumbersSolver
             current1 = current1?.Next;
             current2 = current2?.Next;
         }
-        
+
         if (carry == 1)
             currentFromResult.Next = new(1);
-        
+
         return result;
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace CodingProblems.Graphs;
+namespace CodingProblems.Graphs;
 
 // 1971. Find if Path Exists in Graph
 // There is a bi-directional graph with n vertices, where each vertex is labeled from 0 to n - 1 (inclusive).
@@ -22,35 +22,35 @@ public class ValidPathFinder
             adjacency[v1].Add(v2);
         }
 
-        foreach(int[] edge in edges)
+        foreach (int[] edge in edges)
         {
             addEdge(edge[0], edge[1]);
             addEdge(edge[1], edge[0]);
         }
-        
+
         HashSet<int> visited = new();
         Queue<int> queue = new();
-        
+
         queue.Enqueue(source);
-        
-        while(queue.Any())
+
+        while (queue.Any())
         {
             int vertex = queue.Dequeue();
             visited.Add(vertex);
-            
+
             if (vertex == destination)
                 return true;
-            
+
             if (!adjacency.ContainsKey(vertex))
                 continue;
-            
-            foreach(int nextVertex in adjacency[vertex])
+
+            foreach (int nextVertex in adjacency[vertex])
             {
                 if (!visited.Contains(nextVertex))
                     queue.Enqueue(nextVertex);
             }
         }
-        
+
         return false;
     }
 }

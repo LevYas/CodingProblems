@@ -1,4 +1,4 @@
-﻿using CodingProblems;
+using CodingProblems;
 
 namespace CodingProblemsTests;
 

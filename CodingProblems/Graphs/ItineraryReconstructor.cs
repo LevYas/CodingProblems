@@ -1,4 +1,4 @@
-﻿namespace CodingProblems.Graphs;
+namespace CodingProblems.Graphs;
 
 // 332. Reconstruct Itinerary
 // You are given a list of airline tickets where tickets[i] = [fromi, toi]
@@ -20,7 +20,7 @@ public class ItineraryReconstructor
     {
         Dictionary<string, SortedSet<string>> ticketsIndex = new();
         Dictionary<(string, string), int> ticketsLeft = new();
-        
+
         foreach (IList<string> ticket in tickets)
         {
             ticketsIndex.TryAdd(ticket[0], new SortedSet<string>());

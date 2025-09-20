@@ -1,4 +1,4 @@
-﻿namespace CodingProblems.Other;
+namespace CodingProblems.Other;
 
 public class LongestConsecutiveSequenceFinder
 {
@@ -8,8 +8,8 @@ public class LongestConsecutiveSequenceFinder
             return 0;
 
         HashSet<int> numSet = new();
-        
-        foreach(int num in nums)
+
+        foreach (int num in nums)
             numSet.Add(num);
 
         int maxLength = 1;

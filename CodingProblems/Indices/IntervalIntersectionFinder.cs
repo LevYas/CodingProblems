@@ -1,4 +1,4 @@
-﻿namespace CodingProblems.Indices;
+namespace CodingProblems.Indices;
 
 // 986. Interval List Intersections
 // You are given two lists of closed intervals, firstList and secondList,
@@ -19,7 +19,7 @@ public class IntervalIntersectionFinder
 
         List<int[]> result = new();
 
-        while(currentIdx1 < firstList.Length && currentIdx2 < secondList.Length)
+        while (currentIdx1 < firstList.Length && currentIdx2 < secondList.Length)
         {
             int[] current1 = firstList[currentIdx1];
             int[] current2 = secondList[currentIdx2];
@@ -29,7 +29,7 @@ public class IntervalIntersectionFinder
 
             if (intervalEnd >= intervalStart)
                 result.Add(new[] { intervalStart, intervalEnd });
-            
+
             if (current1[1] <= current2[1])
                 currentIdx1++;
             else

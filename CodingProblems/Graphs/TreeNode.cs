@@ -1,4 +1,4 @@
-﻿namespace CodingProblems.Graphs;
+namespace CodingProblems.Graphs;
 
 public class TreeNode
 {

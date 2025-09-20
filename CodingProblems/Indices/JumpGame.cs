@@ -1,4 +1,4 @@
-﻿namespace CodingProblems.Indices;
+namespace CodingProblems.Indices;
 
 // 55. Jump Game
 // You are given an integer array nums.
@@ -12,18 +12,18 @@ public class JumpGame
     public bool CanJump(int[] nums)
     {
         int maxRightIndex = 0;
-        
+
         for (int i = 0; i < nums.Length; i++)
         {
             if (i > maxRightIndex)
                 return false;
-            
+
             maxRightIndex = Math.Max(maxRightIndex, i + nums[i]);
-            
+
             if (maxRightIndex >= nums.Length - 1)
                 return true;
         }
-        
+
         return false;
     }
 }

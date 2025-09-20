@@ -1,4 +1,4 @@
-﻿namespace CodingProblems.Graphs;
+namespace CodingProblems.Graphs;
 
 // You are given an m x n binary matrix grid. An island is a group of 1's (representing land) connected 4-directionally
 //      (horizontal or vertical.) You may assume all four edges of the grid are surrounded by water.
@@ -8,7 +8,7 @@
 public class MaxAreaFinder
 {
     // Solved using a classical union-find data structure
-    public static int Find (int[][] grid)
+    public static int Find(int[][] grid)
     {
         int m = grid.Length;
         int n = grid[0].Length;

@@ -1,4 +1,4 @@
-﻿namespace CodingProblems.Other;
+namespace CodingProblems.Other;
 
 // 211. Design Add and Search Words Data Structure
 // Design a data structure that supports adding new words and finding if a string matches any previously added string.
@@ -22,7 +22,7 @@ public class WordDictionary
     public void AddWord(string word)
     {
         Node current = _root;
-        
+
         foreach (char c in word)
         {
             current.Children.TryAdd(c, new Node());
@@ -31,7 +31,7 @@ public class WordDictionary
 
         current.IsTheEndOfWord = true;
     }
-    
+
     public bool Search(string word) => tryMatch(_root, word, 0);
 
     private static bool tryMatch(Node currentNode, string word, int currentCharIdx)

@@ -1,4 +1,4 @@
-﻿namespace CodingProblemsTests.Other;
+namespace CodingProblemsTests.Other;
 
 public class Twitter_GetNewsFeed
 {
@@ -32,7 +32,7 @@ public class Twitter_GetNewsFeed
 
         feed.Count.Should().BeLessOrEqualTo(10);
 
-        if(expectedFeed != null)
+        if (expectedFeed != null)
             feed.Should().Equal(expectedFeed);
     }
 

@@ -1,4 +1,4 @@
-﻿namespace CodingProblemsTests.Lists;
+namespace CodingProblemsTests.Lists;
 
 public class LinkedListCycleFinder_DetectCycle
 {

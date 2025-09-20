@@ -1,4 +1,4 @@
-﻿namespace CodingProblems.Indices;
+namespace CodingProblems.Indices;
 
 // 739. Daily Temperatures
 // Given an array of integers temperatures represents the daily temperatures,
@@ -13,10 +13,10 @@ public class DailyTemperaturesScanner
     {
         Stack<(int, int)> valley = new();
         int[] result = new int[temperatures.Length];
-        
+
         valley.Push((temperatures[0], 0));
 
-        for(int i = 1; i < temperatures.Length; i++)
+        for (int i = 1; i < temperatures.Length; i++)
         {
             while (valley.Any() && temperatures[i] > valley.Peek().Item1)
             {
@@ -27,6 +27,6 @@ public class DailyTemperaturesScanner
             valley.Push((temperatures[i], i));
         }
 
-        return result;    
+        return result;
     }
 }

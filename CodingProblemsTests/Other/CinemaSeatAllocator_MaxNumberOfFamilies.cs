@@ -41,7 +41,7 @@ public class CinemaSeatAllocator_MaxNumberOfFamilies
                 break;
 
             for (int j = 1; j <= 10; j++)
-                seats.Add(new[] {i + 1, j});
+                seats.Add(new[] { i + 1, j });
         }
 
         CinemaSeatAllocator.MaxNumberOfFamilies(numberOfRows, seats.ToArray()).Should().BePositive();

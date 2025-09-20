@@ -1,4 +1,4 @@
-﻿namespace CodingProblems.Lists;
+namespace CodingProblems.Lists;
 
 // 142. Linked List Cycle II
 // Given the head of a linked list, return the node where the cycle begins. If there is no cycle, return null.
@@ -15,27 +15,27 @@ public class LinkedListCycleFinder
     {
         ListNode hare = head;
         ListNode tortoise = head;
-        
+
         while (hare != null && tortoise != null)
         {
             hare = hare.Next?.Next;
             tortoise = tortoise.Next;
-            
+
             if (hare == tortoise)
                 break;
         }
-        
+
         if (hare == null || tortoise == null)
             return null;
-        
+
         tortoise = head;
-        
+
         while (tortoise != hare)
         {
             tortoise = tortoise.Next;
             hare = hare.Next;
         }
-        
+
         return tortoise;
     }
 }

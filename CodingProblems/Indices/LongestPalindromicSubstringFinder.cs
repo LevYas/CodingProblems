@@ -1,4 +1,4 @@
-﻿namespace CodingProblems.Indices;
+namespace CodingProblems.Indices;
 
 // 5. Longest Palindromic Substring
 // Given a string s, return the longest palindromic substring in s.
@@ -49,6 +49,6 @@ public class LongestPalindromicSubstringFinder
             }
         }
 
-        return result;        
+        return result;
     }
 }

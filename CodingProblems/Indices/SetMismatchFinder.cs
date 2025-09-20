@@ -1,4 +1,4 @@
-﻿namespace CodingProblems.Indices;
+namespace CodingProblems.Indices;
 
 // 645. Set Mismatch
 // You have a set of integers s, which originally contains all the numbers from 1 to n.

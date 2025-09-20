@@ -1,4 +1,4 @@
-﻿namespace CodingProblems.Indices;
+namespace CodingProblems.Indices;
 
 // 376. Wiggle Subsequence
 // A wiggle sequence is a sequence where the differences between successive numbers strictly

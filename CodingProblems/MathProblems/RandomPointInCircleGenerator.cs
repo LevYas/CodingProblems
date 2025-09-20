@@ -1,4 +1,4 @@
-﻿namespace CodingProblems.MathProblems;
+namespace CodingProblems.MathProblems;
 
 // 478. Generate Random Point in a Circle
 // Given the radius and the position of the center of a circle, implement the function randPoint which generates a uniform random point inside the circle.
@@ -17,19 +17,19 @@ public class RandomPointInCircleGenerator
     private readonly double _maxX;
     private readonly double _minY;
     private readonly double _maxY;
-    
+
     public RandomPointInCircleGenerator(double radius, double centerX, double centerY)
     {
         _radius = radius;
         _centerX = centerX;
         _centerY = centerY;
-        
+
         _minX = _centerX - _radius;
         _maxX = _centerX + _radius;
         _minY = _centerY - _radius;
         _maxY = _centerY + _radius;
     }
-    
+
     // A very simple approach - just generate a point in the rect and return it if it's in the circle
     // Other ways to do it, like via polar coordinates, are very complicated
     public double[] RandPoint()
@@ -38,12 +38,12 @@ public class RandomPointInCircleGenerator
         {
             double x = generateRandomCoord(_minX, _maxX);
             double y = generateRandomCoord(_minY, _maxY);
-            
+
             if (isInCircle(x, y))
-                return new []{x, y};
+                return new[] { x, y };
         }
     }
-    
+
     private bool isInCircle(double x, double y) =>
         (x - _centerX) * (x - _centerX) + (y - _centerY) * (y - _centerY) < _radius * _radius;
 

@@ -1,4 +1,4 @@
-﻿namespace CodingProblemsTests.MathProblems;
+namespace CodingProblemsTests.MathProblems;
 
 public class ServiceCenterPlacer_GetMinDistSum
 {

@@ -1,4 +1,4 @@
-﻿namespace CodingProblems.Indices;
+namespace CodingProblems.Indices;
 
 // 2226. Maximum Candies Allocated to K Children
 // You are given a 0-indexed integer array candies.
@@ -15,13 +15,13 @@ public class MaximumCandiesCalculator
     public int Calculate(int[] candies, long k)
     {
         long sum = 0;
-        
+
         // .Sum doesn't work because of big numbers
-        foreach(int subCandies in candies)
+        foreach (int subCandies in candies)
             sum += subCandies;
 
         double mean = (double)sum / k;
-        
+
         if (mean < 1.0)
             return 0;
 
@@ -41,18 +41,18 @@ public class MaximumCandiesCalculator
 
         if (canAllocate(candies, childrenAmount, middle))
             return findAnswer(candies, childrenAmount, middle, max - 1);
-        
+
         return findAnswer(candies, childrenAmount, min, middle - 1);
     }
 
     private static bool canAllocate(int[] candies, long childrenAmount, int perChild)
     {
         long allocated = 0;
-            
-        foreach(int subCandies in candies)
+
+        foreach (int subCandies in candies)
         {
             allocated += subCandies / perChild;
-                
+
             if (allocated >= childrenAmount)
                 return true;
         }

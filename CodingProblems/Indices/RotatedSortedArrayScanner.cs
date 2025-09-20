@@ -1,4 +1,4 @@
-﻿
+
 namespace CodingProblems.Indices;
 
 // 33. Search in Rotated Sorted Array
@@ -52,13 +52,13 @@ public class RotatedSortedArrayScanner
         while (lo <= hi)
         {
             int mi = (hi + lo) / 2;
-            
+
             if (nums[lo] == target)
                 return lo;
-        
+
             if (nums[hi] == target)
                 return hi;
-                
+
             if (nums[mi] == target)
                 return mi;
 

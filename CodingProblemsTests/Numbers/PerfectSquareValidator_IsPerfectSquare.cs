@@ -1,4 +1,4 @@
-﻿namespace CodingProblemsTests.Numbers;
+namespace CodingProblemsTests.Numbers;
 
 public class PerfectSquareValidator_IsPerfectSquare
 {

@@ -1,4 +1,4 @@
-﻿namespace CodingProblems.Graphs;
+namespace CodingProblems.Graphs;
 
 // You have a lock in front of you with 4 circular wheels.
 //      Each wheel has 10 slots: '0', '1', '2', '3', '4', '5', '6', '7', '8', '9'.
@@ -25,20 +25,20 @@ public class OpenLockSolver
 
         nextMoves.Enqueue(("0000", 0));
 
-        while(nextMoves.Any())
+        while (nextMoves.Any())
         {
             (string current, int turnsAmount) = nextMoves.Dequeue();
 
             if (current == target)
                 return turnsAmount;
-            
+
             foreach (string s in calcNextMoves(current, forbiddenMoves))
                 nextMoves.Enqueue((s, turnsAmount + 1));
         }
-        
+
         return -1;
     }
-    
+
     private static List<string> calcNextMoves(string current, HashSet<string> forbiddenMoves)
     {
         List<string> nextMoves = new();
@@ -47,18 +47,18 @@ public class OpenLockSolver
         {
             StringBuilder sb = new(current);
             int currentNumber = current[i] - '0';
-            
+
             int greaterNumber = currentNumber == 9 ? 0 : currentNumber + 1;
             sb[i] = (char)('0' + greaterNumber);
             tryAdd(nextMoves, forbiddenMoves, sb);
-            
+
             int lowerNumber = currentNumber == 0 ? 9 : currentNumber - 1;
             sb[i] = (char)('0' + lowerNumber);
             tryAdd(nextMoves, forbiddenMoves, sb);
         }
-        
+
         // Performance could be improved by sorting to prioritize the closest ones to the target
-        
+
         return nextMoves;
     }
 

@@ -1,4 +1,4 @@
-﻿namespace CodingProblems.Indices;
+namespace CodingProblems.Indices;
 
 // 436. Find Right Interval
 // You are given an array of intervals, where intervals[i] = [starti, endi] and each starti is unique.

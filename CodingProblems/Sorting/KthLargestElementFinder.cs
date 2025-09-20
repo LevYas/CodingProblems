@@ -1,4 +1,4 @@
-﻿namespace CodingProblems.Sorting;
+namespace CodingProblems.Sorting;
 
 // 215. Kth Largest Element in an Array
 // Given an integer array nums and an integer k, return the kth largest element in the array.
@@ -43,9 +43,9 @@ public class KthLargestElementFinder
         // now we can use the 1st element as a pivot
         while (true)
         {
-            while (nums[++i] < nums[lo] && i != hi);
-            while (nums[--j] > nums[lo] && j != lo);
-            
+            while (nums[++i] < nums[lo] && i != hi) ;
+            while (nums[--j] > nums[lo] && j != lo) ;
+
             if (j <= i)
                 break;
 

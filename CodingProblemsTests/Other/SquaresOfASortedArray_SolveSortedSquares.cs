@@ -1,4 +1,4 @@
-﻿namespace CodingProblemsTests.Other;
+namespace CodingProblemsTests.Other;
 
 public class SquaresOfASortedArray_SolveSortedSquares
 {

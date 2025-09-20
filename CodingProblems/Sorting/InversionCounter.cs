@@ -1,4 +1,4 @@
-﻿namespace CodingProblems.Sorting;
+namespace CodingProblems.Sorting;
 
 public static class InversionCounter
 {

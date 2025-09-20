@@ -1,4 +1,4 @@
-﻿namespace CodingProblems.Graphs;
+namespace CodingProblems.Graphs;
 
 // 331. Verify Preorder Serialization of a Binary Tree
 // One way to serialize a binary tree is to use preorder traversal. When we encounter a non-null node, we record the node's value.
@@ -19,15 +19,15 @@ public class PreorderVerifier
         Stack<(string val, bool isLeftVisited, bool isRightVisited)> currentBranch = new();
 
         string[] tokens = preorder.Split(",");
-        
+
         if (tokens[0] != "#")
             currentBranch.Push((tokens[0], false, false));
 
-        for(int i = 1; i < tokens.Length; i++)
+        for (int i = 1; i < tokens.Length; i++)
         {
             if (!currentBranch.Any())
                 return false;
-            
+
             var parent = currentBranch.Pop();
 
             if (!parent.isLeftVisited)
@@ -36,7 +36,7 @@ public class PreorderVerifier
                 parent.isRightVisited = true;
 
             currentBranch.Push(parent);
-            
+
             if (tokens[i] != "#")
                 currentBranch.Push((tokens[i], false, false));
             else
@@ -46,7 +46,7 @@ public class PreorderVerifier
                     currentBranch.Pop();
                     currentBranch.TryPeek(out parent);
                 }
-            }            
+            }
         }
 
         return !currentBranch.Any();

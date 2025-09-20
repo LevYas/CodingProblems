@@ -1,4 +1,4 @@
-﻿namespace CodingProblems.Indices;
+namespace CodingProblems.Indices;
 
 // 417. Pacific Atlantic Water Flow
 // There is an m x n rectangular island that borders both the Pacific Ocean and Atlantic Ocean.
@@ -61,7 +61,7 @@ public class PacificAtlanticFlowFinder
                     result.Add(new() { r, c });
             }
         }
-        
+
         return result.Cast<IList<int>>().ToList();
     }
 
