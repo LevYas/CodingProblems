@@ -1,10 +1,6 @@
 # Coding Problems
 
-[![Build status](https://ci.appveyor.com/api/projects/status/jbjxwn8cgssnvxro?svg=true)](https://ci.appveyor.com/project/LevYas/codingproblems)
-
 Here are my tested solutions to some coding problems.
-
-They couldn't advertise my architecture design skills but good enough to show my approach to write clean, testable, and effective code.
 
 ## The solution structure
 1. **CodingProblems:** different coding problems solved using C# and .NET. Inside the project, you will find solved problems on different topics: graphs, array indices, lists, math, numerical systems, sorting, heap, and others. All the algorithms are good in performance, usually, they're faster than 80-90% of submissions according to LeetCode metrics.
@@ -24,7 +20,7 @@ They couldn't advertise my architecture design skills but good enough to show my
 
 ### Prerequisites
 1. Visual Studio 2022 or later (Community Edition is enough) with the following components:
-    1. .NET 6 SDK
+    1. .NET 9 SDK
     1. C++ development workload
     1. Windows 10 SDK
 
