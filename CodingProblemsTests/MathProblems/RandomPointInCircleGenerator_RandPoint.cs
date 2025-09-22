@@ -17,7 +17,7 @@ public class RandomPointInCircleGenerator_RandPoint
             double[] result = generator.RandPoint();
 
             Vector2 resPoint = new((float)result[0], (float)result[1]);
-            (resPoint - center).Length().Should().BeLessOrEqualTo((float)radius);
+            (resPoint - center).Length().Should().BeLessThanOrEqualTo((float)radius);
         }
     }
 }

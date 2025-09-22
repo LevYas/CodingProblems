@@ -30,7 +30,7 @@ public class Twitter_GetNewsFeed
 
         IList<int> feed = sut.GetNewsFeed(userToRequest);
 
-        feed.Count.Should().BeLessOrEqualTo(10);
+        feed.Count.Should().BeLessThanOrEqualTo(10);
 
         if (expectedFeed != null)
             feed.Should().Equal(expectedFeed);

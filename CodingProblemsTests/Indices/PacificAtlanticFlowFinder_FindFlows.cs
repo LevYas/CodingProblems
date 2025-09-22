@@ -1,5 +1,3 @@
-using System.Collections;
-
 namespace CodingProblemsTests.Indices;
 
 public class PacificAtlanticFlowFinder_FindFlows
@@ -10,7 +8,7 @@ public class PacificAtlanticFlowFinder_FindFlows
     {
         IList<IList<int>> result = new PacificAtlanticFlowFinder().FindFlows(heights);
 
-        var expectedList = (IList)expected.Select(l => (IList)l.ToList()).ToList();
+        var expectedList = (IList<IList<int>>)(expected.Select(l => (IList<int>)l.ToList()).ToList());
         result.Should().BeEquivalentTo(expectedList);
     }
 
