@@ -1,4 +1,4 @@
-using FluentAssertions.Execution;
+using AwesomeAssertions.Execution;
 using KthLargestElementFinder = CodingProblems.Sorting.KthLargestElementFinder;
 
 namespace CodingProblemsTests.Sorting;

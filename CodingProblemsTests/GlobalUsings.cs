@@ -1,4 +1,4 @@
-global using FluentAssertions;
+global using AwesomeAssertions;
 global using Xunit;
 global using CodingProblems.Graphs;
 global using CodingProblems.Indices;
