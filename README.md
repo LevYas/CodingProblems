@@ -22,7 +22,6 @@ Here are my tested solutions to some coding problems.
 1. Visual Studio 2022 or later (Community Edition is enough) with the following components:
     1. .NET 9 SDK
     1. C++ development workload
-    1. Windows 10 SDK
 
 ### Building
 1. Open the solution file and execute the "Build solution" command.
